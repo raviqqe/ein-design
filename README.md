@@ -1,5 +1,7 @@
 # The design of Ein programming language
 
+- [Type system](type_system.md)
+
 ## Mission statement
 
 Eliminate all software bugs in the world!
