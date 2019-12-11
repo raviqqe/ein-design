@@ -2,6 +2,7 @@
 
 - [Type system](type_system.md)
 - [Naming convention](naming_convention.md)
+- [Random notes](random_notes.md)
 - [References](references.md)
 
 ## Mission statement
