@@ -1,6 +1,8 @@
 # The design of Ein programming language
 
 - [Type system](type_system.md)
+- [Naming convention](naming_convention.md)
+- [References](references.md)
 
 ## Mission statement
 
