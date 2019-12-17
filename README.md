@@ -13,16 +13,26 @@ Eliminate all software bugs in the world!
 
 Make programming easy for beginners!
 
+- Testable
+  - Deteriministic
+  - Strict evaluation
+  - Dependency injection
+- Simple
+  - Easy to learn
+- Restricted
+  - Statically typed
+  - Less mistakes
+
 ## Product strategy
 
-1. Programming language to write command line tools.
-1. Programming language to write HTTP API servers.
-1. Binary support.
-1. General-purpose programming language for biginners.
+1. Programming language to write command line tools
+1. Programming language to write HTTP API servers
+1. Limited generics
+1. Binary support
+1. General-purpose programming language for biginners
 
 ## Product principles
 
-- Restriction reduces mistakes.
 - 1% does not matter.
   - e.g. Go
 - Complexity can only be built upon simplicity.
