@@ -1,6 +1,7 @@
 # The design of Ein programming language
 
 - [Type system](type_system.md)
+- [Command-query separation](command_query_separation.md)
 - [Naming convention](naming_convention.md)
 - [Random notes](random_notes.md)
 - [References](references.md)
