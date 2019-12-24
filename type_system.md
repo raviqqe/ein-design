@@ -19,7 +19,7 @@ type Bar = Foo Foo | Bar
 type Foo { name: String, age: Number }
 
 // Sum types
-type None
+type None {}
 type Bar = Foo | None
 ```
 
@@ -69,7 +69,10 @@ case x of
 
 ## v4
 
+- Nominal types
 - No structural subtyping
+- No type alias
+- Similar to Go
 
 ```
 // Product types
