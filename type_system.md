@@ -42,7 +42,7 @@ type Baz = "foo" | "bar" | "baz"
 type Blah = { type: "blah", ... }
 ```
 
-## Case expression
+### Case expression
 
 ```
 type Foo = { name: String, ... }
@@ -57,7 +57,7 @@ case x of
   Bar -> e4
 ```
 
-### Flattening type switch?
+#### Flattening type switch?
 
 ```
 case x of
@@ -65,4 +65,32 @@ case x of
   Foo { name: "John", ... } -> e2
   Foo { name: name, ... } -> e3
   Bar -> e4
+```
+
+## v4
+
+- No structural subtyping
+
+```
+// Product types
+type Foo = { name: String, age: Number }
+
+// Sum types
+type Bar =
+    Foo Foo
+  | Bar Bar // Bar.Bar
+  | Baz
+```
+
+### Case expression
+
+```
+case foo of
+  { name: "John", ... } -> e1
+  { name: "Doe", ... } -> e2
+
+case bar of
+  Foo foo -> e1
+  Bar bar -> e2
+  Baz -> e3
 ```
