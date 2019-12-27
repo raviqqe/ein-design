@@ -78,6 +78,9 @@ case x of
 // Product types
 type Foo = { name: String, age: Number }
 
+// Product types with functions
+type Foo = { doSomething: Number -> Number }
+
 // Sum types
 type Bar =
     Foo Foo
