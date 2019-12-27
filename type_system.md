@@ -83,8 +83,8 @@ type Foo = { doSomething: Number -> Number }
 
 // Sum types
 type Bar =
-    Foo Foo
-  | Bar Bar // Bar.Bar
+    Foo Foo // Bar.Foo
+  | Bar Bar
   | Baz
 ```
 
@@ -99,4 +99,11 @@ case bar of
   Foo foo -> e1
   Bar bar -> e2
   Baz -> e3
+
+case bar of
+  Foo { name: "John", ... } -> e1
+  Bar (Foo foo) -> e2
+  Bar (Bar bar) -> e3
+  Bar (Baz baz) -> e4
+  Baz -> e5
 ```

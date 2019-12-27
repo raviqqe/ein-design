@@ -34,6 +34,7 @@ Make programming easy for beginners!
 
 ## Product principles
 
+- Perfection is achieved when there is nothing to take away.
 - 1% does not matter.
   - e.g. Go
 - Complexity can only be built upon simplicity.
