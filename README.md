@@ -38,6 +38,7 @@ Make programming easy for beginners!
   - e.g. Go
 - Complexity can only be built upon simplicity.
   - Application logics are complex!
+- Resemble but do not depend on existing technologies
 
 ## Design details
 
