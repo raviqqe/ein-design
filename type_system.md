@@ -107,3 +107,36 @@ case bar of
   Bar (Baz baz) -> e4
   Baz -> e5
 ```
+
+## v5
+
+- Nominal product types
+- Structurally-subtyped sum types
+- Type aliases
+
+```
+// Product types
+type Foo = { name: String, age: Number }
+
+// Product types with functions
+type Foo = { doSomething: Number -> Number }
+
+// Sum types
+type Bar =
+    Foo // Bar.Foo
+  | Bar
+  | Baz
+```
+
+### Case expression
+
+```
+case foo of
+  { name: "John", ... } -> e1
+  { name: "Doe", ... } -> e2
+
+case bar of
+  Foo -> e1
+  Bar -> e2
+  Baz -> e3
+```
