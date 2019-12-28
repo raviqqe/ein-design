@@ -27,6 +27,7 @@ type Bar = Foo | None
 
 - Structural subtyping
 - No nominal types
+- Needs `mu` constructors.
 
 ```
 // Product types
