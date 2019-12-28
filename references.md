@@ -7,6 +7,12 @@
 - [Expresso](https://github.com/willtim/Expresso)
 - [IntercalScript](https://github.com/Storyyeller/IntercalScript)
 - [TypeScript](https://github.com/microsoft/TypeScript)
+- [Haskell](https://github.com/ghc/ghc)
+- [OCaml](https://github.com/ocaml/ocaml)
+
+## Type system
+
+- [Lecture slides of recursive types at Cornell University](https://www.cs.cornell.edu/courses/cs4110/2012fa/lectures/lecture27.pdf)
 
 ## Immix GC
 
