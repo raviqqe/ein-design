@@ -27,7 +27,10 @@ type Bar = Foo | None
 
 - Structural subtyping
 - No nominal types
-- Needs `mu` constructors.
+- Needs μ constructors.
+- Recursive types can be defined only by explicit type definitions.
+  - Not by type inference
+  - i.e. no automatic introduction of μ constructors
 
 ```
 // Product types
