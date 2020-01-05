@@ -127,3 +127,11 @@ do
   result = readFile "foo.txt"
   writeFile "bar.txt" result
 ```
+
+##### Custom variable binding?
+
+```
+do state
+  result = get "key1"
+  set "key2" result
+```
