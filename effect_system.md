@@ -108,9 +108,17 @@ is equivalent to:
 
 ```
 let
-  { result, world } = world.readFile "foo.txt"
+  readFile = .readFile world
+  writeFile = .writeFile world
+  ...
+in let
+  { result, world } = readFile "foo.txt"
+in let
+  readFile = .readFile world
+  writeFile = .writeFile world
+  ...
 in
-  world.writeFile "bar.txt" result
+  writeFile "bar.txt" result
 ```
 
 #### v2
