@@ -86,3 +86,44 @@ type World =
   , ...
   }
 ```
+
+### Do notation?
+
+#### v1
+
+```
+do writeFile "bar.txt" (do readFile "foo.txt")
+```
+
+or
+
+```
+let
+  result = do readFile "foo.txt"
+in
+  do writeFile "bar.txt" result
+```
+
+is equivalent to:
+
+```
+let
+  { result, world } = world.readFile "foo.txt"
+in
+  world.writeFile "bar.txt" result
+```
+
+#### v2
+
+```
+do result = readFile "foo.txt"
+do writeFile "bar.txt" result
+```
+
+#### v3
+
+```
+do
+  result = readFile "foo.txt"
+  writeFile "bar.txt" result
+```
