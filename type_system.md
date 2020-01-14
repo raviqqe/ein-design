@@ -148,15 +148,18 @@ case bar of
 ## v6
 
 - Structural typing
-- ADT
+- ADT-like union types
 - Polymorphic variants
 - Separate namespaces for types and variables
 
 ```
 // Type aliases
+type Id = String
 type Human = { name : String, age : Number }
+type Parser = String -> String
 
-// ADT
+// Union types
+// Content types cannot be union types.
 type Bar =
     Foo { firstName : String, lastName : String }
   | Bar { name : String, age : Number }
@@ -178,6 +181,10 @@ x = Foo { name = "John", age = 42 }
 type Result =
     ...Foo
   | Error String
+
+type Result =
+    ...Foo
+  | Error
 ```
 
 ### Option types
