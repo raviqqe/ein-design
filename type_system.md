@@ -96,8 +96,8 @@ type Bar =
 
 ```
 case foo of
-  { name: "John", ... } -> e1
-  { name: "Doe", ... } -> e2
+  { name = "John", ... } -> e1
+  { name = "Doe", ... } -> e2
 
 case bar of
   Foo foo -> e1
@@ -105,7 +105,7 @@ case bar of
   Baz -> e3
 
 case bar of
-  Foo { name: "John", ... } -> e1
+  Foo { name = "John", ... } -> e1
   Bar (Foo foo) -> e2
   Bar (Bar bar) -> e3
   Bar (Baz baz) -> e4
@@ -120,10 +120,10 @@ case bar of
 
 ```
 // Product types
-type Foo = { name: String, age: Number }
+type Foo = { name : String, age : Number }
 
 // Product types with functions
-type Foo = { doSomething: Number -> Number }
+type Foo = { doSomething : Number -> Number }
 
 // Sum types
 type Bar =
@@ -136,11 +136,69 @@ type Bar =
 
 ```
 case foo of
-  { name: "John", ... } -> e1
-  { name: "Doe", ... } -> e2
+  { name = "John", ... } -> e1
+  { name = "Doe", ... } -> e2
 
 case bar of
   Foo -> e1
   Bar -> e2
   Baz -> e3
+```
+
+## v6
+
+- Structural typing
+- ADT
+- Polymorphic variants
+- Separate namespaces for types and variables
+
+```
+// Product types
+type Foo = Foo { name : String, age : Number }
+
+// Sum types
+type Bar =
+    Foo { firstName : String, lastName : String }
+  | Bar { name : String, age : Number }
+  | Baz Number
+  | Blah
+
+// Extend existing types
+type Baz =
+    ...Foo
+  | Blah String
+
+x : Bar
+x = Foo { name = "John", age = 42 }
+```
+
+### Result types
+
+```
+type Result =
+    ...Foo
+  | Error String
+```
+
+### Option types
+
+```
+type Option =
+    ...Foo
+  | None
+```
+
+### Case expression
+
+```
+case foo of
+  Foo { name = "John", ... } -> e1
+  Foo { name = "Doe", ... } -> e2
+  Foo { name, ... } -> e3
+
+case bar of
+  Foo { name, ... } -> e1
+  Bar bar -> e2
+  Baz baz -> e3
+  Blah -> e4
 ```
