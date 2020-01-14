@@ -153,10 +153,10 @@ case bar of
 - Separate namespaces for types and variables
 
 ```
-// Product types
-type Foo = Foo { name : String, age : Number }
+// Type aliases
+type Human = { name : String, age : Number }
 
-// Sum types
+// ADT
 type Bar =
     Foo { firstName : String, lastName : String }
   | Bar { name : String, age : Number }
