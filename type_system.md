@@ -209,3 +209,60 @@ case bar of
   Baz baz -> e3
   Blah -> e4
 ```
+
+## v7
+
+- Nominal typing
+- Polymorphic variants
+- Separate namespaces for types and variables
+
+```
+// ADT
+type Foo =
+    Foo { name : String, age : Number }
+  | Bar Number
+  | Baz
+
+// Extend existing types
+type Bar =
+    ...Foo
+  | Blah String
+
+x : Bar
+x = Foo { name = "John", age = 42 }
+```
+
+### Result types
+
+```
+type Result =
+    ...Foo
+  | Error String
+
+type Result =
+    ...Foo
+  | Error
+```
+
+### Option types
+
+```
+type Option =
+    ...Foo
+  | None
+```
+
+### Case expression
+
+```
+case foo of
+  Foo { name = "John", ... } -> e1
+  Foo { name = "Doe", ... } -> e2
+  Foo { name, ... } -> e3
+
+case bar of
+  Foo { name, ... } -> e1
+  Bar bar -> e2
+  Baz baz -> e3
+  Blah -> e4
+```
