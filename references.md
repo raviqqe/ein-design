@@ -6,6 +6,7 @@
 - [Gluon](https://github.com/gluon-lang/gluon)
 - [Expresso](https://github.com/willtim/Expresso)
 - [IntercalScript](https://github.com/Storyyeller/IntercalScript)
+  - Case objects are similar to polymorphic variants in OCaml.
 - [TypeScript](https://github.com/microsoft/TypeScript)
 - [Haskell](https://github.com/ghc/ghc)
 - [OCaml](https://github.com/ocaml/ocaml)
