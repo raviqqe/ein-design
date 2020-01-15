@@ -8,3 +8,9 @@
 - [v6](v6.md)
 - [v7](v7.md)
 - [v8](v8.md)
+
+## Learnings
+
+- Difficult to create a nominal type system without type aliases
+  - Although there is an exmple, Go
+  - i.e. structural typing is the simplest.
