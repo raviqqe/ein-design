@@ -18,7 +18,7 @@ Eliminate all software bugs in the world!
 Make programming easy for beginners!
 
 - Testable
-  - Deteriministic
+  - Deterministic
   - Strict evaluation
   - Dependency injection
 - Simple
@@ -33,7 +33,7 @@ Make programming easy for beginners!
 1. Programming language to write HTTP API servers
 1. Limited generics
 1. Binary support
-1. General-purpose programming language for biginners
+1. General-purpose programming language for beginners
 
 ## Product principles
 

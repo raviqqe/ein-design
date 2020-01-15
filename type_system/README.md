@@ -13,5 +13,5 @@
 ## Learnings
 
 - Difficult to create a nominal type system without type aliases
-  - Although there is an exmple, Go
+  - Although there is an example, Go
   - i.e. structural typing is the simplest.

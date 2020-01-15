@@ -1,6 +1,6 @@
 # Effect system
 
-- Everyting is passed to the main function.
+- Everything is passed to the main function.
 - Effects
   - I/O
     - File system
