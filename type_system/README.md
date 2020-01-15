@@ -8,6 +8,7 @@
 - [v6](v6.md)
 - [v7](v7.md)
 - [v8](v8.md)
+- [v9](v9.md)
 
 ## Learnings
 
