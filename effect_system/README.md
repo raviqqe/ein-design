@@ -15,8 +15,6 @@
 ## Main functions
 
 ```
-import Effects
-
 main : World -> None | Error
 main world =
   let
