@@ -1,8 +1,9 @@
 # References
 
-## Inspiring languages
+## Programming languages
 
 - [Elm](https://github.com/elm)
+- [Go](https://github.com/golang/go)
 - [Gluon](https://github.com/gluon-lang/gluon)
 - [Expresso](https://github.com/willtim/Expresso)
 - [IntercalScript](https://github.com/Storyyeller/IntercalScript)
@@ -10,6 +11,10 @@
 - [TypeScript](https://github.com/microsoft/TypeScript)
 - [Haskell](https://github.com/ghc/ghc)
 - [OCaml](https://github.com/ocaml/ocaml)
+
+## Language design
+
+- [Less is more: language features](https://blog.ploeh.dk/2015/04/13/less-is-more-language-features/)
 
 ## Type system
 
