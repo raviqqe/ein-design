@@ -2,6 +2,7 @@
 
 - Nominal typing
 - No top type
+- [Generics](generics.md)
 
 ## Built-in types
 

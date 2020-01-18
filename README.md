@@ -1,7 +1,6 @@
 # The design of Ein programming language
 
 - [Type system](type_system)
-- [Builtin generic functions and types](builtin_generics.md)
 - [Effect system](effect_system)
 - [Module system](module_system.md)
 - [Naming convention](naming_convention.md)

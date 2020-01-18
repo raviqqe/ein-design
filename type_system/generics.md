@@ -1,4 +1,4 @@
-# Builtin generic functions and types
+# Generics
 
 ## Functions
 
