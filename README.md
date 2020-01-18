@@ -4,7 +4,6 @@
 - [Effect system](effect_system)
 - [Module system](module_system.md)
 - [Naming convention](naming_convention.md)
-- [Random notes](random_notes.md)
 - [References](references.md)
 
 ## Mission statement
