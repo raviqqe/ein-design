@@ -8,40 +8,35 @@
 
 ## Mission statement
 
-Eliminate all software bugs in the world!
+Make IT available everywhere!
 
 ## Product vision
 
-Make programming easy for beginners!
+Make software development easier and faster!
 
+- Simple
+  - Easy to learn
 - Testable
   - Deterministic
   - Strict evaluation
   - Dependency injection
-- Simple
-  - Easy to learn
 - Restricted
   - Statically typed
-  - Less mistakes
+  - Immutability
 
 ## Product strategy
 
 1. Programming language to write command line tools
 1. Programming language to write HTTP API servers
-1. Limited generics
 1. Binary support
 1. General-purpose programming language for beginners
 
 ## Product principles
 
-- Perfection is achieved when there is nothing to take away.
-- 1% does not matter.
+- Perfection is achieved when there is nothing to take away or add.
+- 1% demand does not matter.
   - e.g. Go
 - Complexity can only be built upon simplicity.
   - Application logics are complex!
-- Resemble but do not depend on existing technologies
-
-## Design details
-
-- Limited polymorphism
-  - No generics (parametric polymorphism)
+- Resemble but do not depend on existing technologies.
+- There should be only one way to do one thing.
