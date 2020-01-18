@@ -20,12 +20,12 @@ import Effects
 main : World -> None | Error
 main world =
   let
-    { result, world } = world.readFile "foo.txt"
+    { result, world } = .readFile world "foo.txt"
   in
-    world.writeFile "bar.txt" result
+    .writeFile world "bar.txt" result
 ```
 
-## Types
+## World types
 
 ```
 type World =
