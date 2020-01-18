@@ -6,15 +6,18 @@
 
 ## Types
 
-- `Null`
-- `Number`
 - `Foo`
-- `Bar`
+- `BarBaz`
 
 ## Variables
 
 - `foo`
-- `fooBar`
+- `barBaz`
+
+## Modules
+
+- `Foo`
+- `BarBaz`
 
 ## Packages
 
