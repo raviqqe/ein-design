@@ -2,7 +2,6 @@
 
 - [Type system](type_system)
 - [Builtin generic functions and types](builtin_generics.md)
-- [Command-query separation](command_query_separation.md)
 - [Effect system](effect_system.md)
 - [Module system](module_system.md)
 - [Naming convention](naming_convention.md)
