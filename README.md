@@ -30,6 +30,7 @@ Make software development easier and faster!
 1. Programming language to write HTTP API servers
 1. Binary support
 1. General-purpose programming language for beginners
+1. Self hosting
 
 ## Product principles
 
