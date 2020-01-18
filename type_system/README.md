@@ -1,7 +1,7 @@
 # Type system
 
 - Nominal typing
-- Restircted polymorphism
+- Restricted polymorphism
 - No top type
 - [Generics](generics.md)
 
