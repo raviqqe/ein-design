@@ -23,16 +23,16 @@ import "github.com/ein-lang/ein/Effect"
 main : Stream World -> None | Error
 main worlds =
   let
-    content = Effect.readFile (first worlds) "foo.txt"
+    content = Effect.readFile "foo.txt" (first worlds)
   in
-    Effect.writeFile (second worlds) "bar.txt" content
+    Effect.writeFile "bar.txt" content (second worlds)
 ```
 
 ### Effect module
 
 ```
-readFile : World -> String -> String | Error
-writeFile : World -> String -> String -> None | Error
+readFile : String -> World -> String | Error
+writeFile : String -> String -> World -> None | Error
 ```
 
 ## Do notation
@@ -50,19 +50,19 @@ let
   world = first worlds
   worlds = tail worlds
 in let
-  content = Effect.readFile world "foo.txt"
+  content = Effect.readFile "foo.txt" world
 in let
   world = first worlds
   worlds = tail worlds
 in
-  Effect.writeFile world "bar.txt" content
+  Effect.writeFile "bar.txt" content world
 ```
 
 ## Implementation
 
 ### World types
 
-The values contain states or results of primitive effects executed there for immutability and idempotency.
+Their values contain results of primitive effects executed there for immutability and idempotency.
 
 ```
 type World = { ... }
