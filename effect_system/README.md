@@ -1,71 +1,74 @@
 # Effect system
 
-- Impure functions are injected only as arguments to main functions.
-  - Any modules including standard ones are all pure.
-- Effects
-  - I/O
-    - File system
-    - Network
-    - Clock
-      - Time sort
-  - Environment
-    - Command-line arguments
-    - Environment variables
+- All effects have output.
+  - e.g. `sleep : Number -> None | Error`
+- Modules can be both pure or impure.
+
+## Effects
+
+- I/O
+  - File system
+  - Network
+  - Clock
+    - Time sort
+- Environment
+  - Command-line arguments
+  - Environment variables
 
 ## Main functions
 
 ```
-main : World -> None | Error
-main world =
+import "github.com/ein-lang/ein/Effect"
+
+main : Stream World -> None | Error
+main worlds =
   let
-    { result, world } = .readFile world "foo.txt"
+    content = Effect.readFile (first worlds) "foo.txt"
   in
-    .writeFile world "bar.txt" result
+    Effect.writeFile (second worlds) "bar.txt" content
 ```
 
-## World types
+### Effect module
 
 ```
-type World =
-  { readFile : String -> { result : String | Error, world : World }
-  , writeFile : String -> String -> { result : None | Error, world : World }
-  , ...
-  }
+readFile : World -> String -> String | Error
+writeFile : World -> String -> String -> None | Error
 ```
 
 ## Do notation
 
 ```
-do
-  result = readFile "foo.txt"
-  writeFile "bar.txt" result
+do worlds
+  content = Effect.readFile "foo.txt"
+  Effect.writeFile "bar.txt" content
 ```
 
 is equivalent to:
 
 ```
 let
-  readFile = .readFile world
-  writeFile = .writeFile world
-  ...
+  world = first worlds
+  worlds = tail worlds
 in let
-  { result = result, world } = readFile "foo.txt"
+  content = Effect.readFile world "foo.txt"
 in let
-  readFile = .readFile world
-  writeFile = .writeFile world
-  ...
+  world = first worlds
+  worlds = tail worlds
 in
-  writeFile "bar.txt" result
+  Effect.writeFile world "bar.txt" content
 ```
 
-### Custom variable binding?
+## Implementation
+
+### World types
+
+The values contain states or results of primitive effects executed there for immutability and idempotency.
 
 ```
-do state
-  result = get "key1"
-  set "key2" result
+type World = { ... }
 ```
 
 ## History
 
 - [v1](v1.md)
+- [v2](v2.md)
