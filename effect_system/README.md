@@ -2,7 +2,7 @@
 
 - All effects have output.
   - e.g. `sleep : Number -> None | Error`
-- Modules can be both pure or impure.
+  - For testability
 
 ## Effects
 
@@ -33,6 +33,7 @@ main worlds =
 ```
 readFile : String -> World -> String | Error
 writeFile : String -> String -> World -> None | Error
+...
 ```
 
 ## Do notation
@@ -56,16 +57,6 @@ in let
   worlds = tail worlds
 in
   Effect.writeFile "bar.txt" content world
-```
-
-## Implementation
-
-### World types
-
-Their values contain results of primitive effects executed there for immutability and idempotency.
-
-```
-type World = { ... }
 ```
 
 ## History
