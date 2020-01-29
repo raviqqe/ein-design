@@ -1,8 +1,10 @@
 # Effect system
 
+- Impure functions are injected only as arguments to main functions.
+  - Any modules including standard ones are all pure.
 - All effects have output.
-  - e.g. `sleep : Number -> None | Error`
   - For testability
+  - e.g. `sleep : Number -> None | Error`
 
 ## Effects
 
@@ -21,19 +23,41 @@
 import "github.com/ein-lang/ein/Effect"
 
 main : Stream World -> None | Error
-main worlds =
+main worlds = ...
+```
+
+## Effect module
+
+```
+readFile : String -> Stream World -> String | Error
+readFile filename worlds =
   let
-    content = Effect.readFile "foo.txt" (first worlds)
+    file = .openFile (first world) filename ReadOnly
   in
-    Effect.writeFile "bar.txt" content (second worlds)
-```
+    .readFile (second worlds) (! file)
 
-### Effect module
 
-```
-readFile : String -> World -> String | Error
-writeFile : String -> String -> World -> None | Error
+writeFile : String -> String -> Stream World -> None | Error
+writeFile filename content worlds =
+  let
+    file = .openFile (first worlds) filename WriteOnly
+  in
+    .writeFile (second worlds) file content
+
 ...
+```
+
+### World types
+
+```
+type World =
+  { openFile : String -> File | Error
+  , readFile : File -> String | Error
+  , writeFile : File -> String -> None | Error
+  , getArguments : List String
+  , getEnvironmentVariables : Map String String
+  , ...
+  }
 ```
 
 ## Do notation
@@ -48,18 +72,17 @@ is equivalent to:
 
 ```
 let
-  world = first worlds
-  worlds = tail worlds
+  { worlds, otherWorlds } = split worlds
 in let
-  content = Effect.readFile "foo.txt" world
+  content = Effect.readFile "foo.txt" otherWorlds
 in let
-  world = first worlds
-  worlds = tail worlds
+  { worlds, otherWorlds } = split worlds
 in
-  Effect.writeFile "bar.txt" content world
+  Effect.writeFile "bar.txt" content otherWorlds
 ```
 
 ## History
 
 - [v1](v1.md)
 - [v2](v2.md)
+- [v3](v3.md)
