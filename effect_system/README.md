@@ -12,10 +12,12 @@
   - File system
   - Network
   - Clock
-    - Time sort
 - Environment
   - Command-line arguments
   - Environment variables
+- Nondeterministics
+  - Parallel evaluation
+  - Concurrent queues
 
 ## Main functions
 
