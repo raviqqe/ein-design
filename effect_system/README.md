@@ -73,9 +73,8 @@ type Command =
 
 ```
 type Nondeterministics =
-  { sortByTime : (None -> Any) -> Stream Any
+  { sortByTime : Stream (None -> Any) -> Stream Any
   , parallellize : List (None -> Any) -> List Any
-  , parallellizeAndSortByTime : [ None -> Any ] -> Stream Any
   , ...
   }
 ```
@@ -92,11 +91,11 @@ is equivalent to:
 
 ```
 let
-  { worlds, otherWorlds } = split worlds
+  [worlds, otherWorlds] = split worlds
 in let
   content = Effect.readFile "foo.txt" otherWorlds
 in let
-  { worlds, otherWorlds } = split worlds
+  [worlds, otherWorlds] = split worlds
 in
   Effect.writeFile "bar.txt" content otherWorlds
 ```
