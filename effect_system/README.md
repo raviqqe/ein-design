@@ -91,11 +91,11 @@ is equivalent to:
 
 ```
 let
-  [worlds, otherWorlds] = split worlds
+  [worlds, otherWorlds] = Effect.split worlds
 in let
   content = Effect.readFile "foo.txt" otherWorlds
 in let
-  [worlds, otherWorlds] = split worlds
+  [worlds, otherWorlds] = Effect.split worlds
 in
   Effect.writeFile "bar.txt" content otherWorlds
 ```
