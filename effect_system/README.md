@@ -31,19 +31,19 @@ main environment commands concurrencies = ...
 ## Effect module
 
 ```
-readFile : String -> Stream World -> String | Error
-readFile filename worlds =
+readFile : String -> Stream Command -> String | Error
+readFile filename commands =
   let
-    file = .openFile (first world) filename ReadOnly
+    file = .openFile (first commands) filename ReadOnly
   in
-    .readFile (second worlds) (! file)
+    .readFile (second commands) (! file)
 
-writeFile : String -> String -> Stream World -> None | Error
-writeFile filename content worlds =
+writeFile : String -> String -> Stream Command -> None | Error
+writeFile filename content commands =
   let
-    file = .openFile (first worlds) filename WriteOnly
+    file = .openFile (first commands) filename WriteOnly
   in
-    .writeFile (second worlds) file content
+    .writeFile (second commands) file content
 
 ...
 ```
@@ -85,7 +85,7 @@ type Concurrency =
 ## Do notation
 
 ```
-do worlds
+do commands
   content = Effect.readFile "foo.txt"
   Effect.writeFile "bar.txt" content
 ```
@@ -94,17 +94,17 @@ is equivalent to:
 
 ```
 let
-  worldStreams = Effect.splitStream worlds
-  worlds = first worldStreams
-  otherWorlds = second worldStreams
+  commandStreams = Effect.splitStream commands
+  commands = first commandStreams
+  otherCommands = second commandStreams
 in let
-  content = Effect.readFile "foo.txt" otherWorlds
+  content = Effect.readFile "foo.txt" otherCommands
 in let
-  worldStreams = Effect.splitStream worlds
-  worlds = first worldStreams
-  otherWorlds = second worldStreams
+  commandStreams = Effect.splitStream commands
+  commands = first commandStreams
+  otherCommands = second commandStreams
 in
-  Effect.writeFile "bar.txt" content otherWorlds
+  Effect.writeFile "bar.txt" content otherCommands
 ```
 
 ## History
