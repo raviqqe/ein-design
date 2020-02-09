@@ -73,8 +73,8 @@ type Command =
 
 ```
 type Concurrency =
-  { mapUnorderedStream : Stream (None -> Any) -> Stream Any
-  , mapStream : Stream (None -> Any) -> Stream Any
+  { mapUnorderedStream : (Any -> Any) -> Stream Any -> Stream Any
+  , mapStream : (Any -> Any) -> Stream Any -> Stream Any
   , splitStream : Stream Any -> Stream (Stream Any)
   , ...
   }
