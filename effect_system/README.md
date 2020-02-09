@@ -22,8 +22,6 @@
 ## Main functions
 
 ```
-import "github.com/ein-lang/ein/Effect"
-
 main : Parameters -> Stream Command -> Stream Concurrency -> None | Error
 main parameters commands concurrencies = ...
 ```
