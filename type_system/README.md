@@ -178,9 +178,3 @@ case bar of
 - [v8](v8.md)
 - [v9](v9.md)
 - [v10](v10.md)
-
-### Learnings
-
-- Difficult to create a nominal type system without type aliases
-  - Although there is an example, Go
-  - i.e. structural typing is the simplest.
