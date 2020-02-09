@@ -71,12 +71,13 @@ type Command =
   }
 ```
 
-### Nondeterministics types
+### Concurrency types
 
 ```
-type Nondeterministics =
+type Concurrency =
   { sortByTime : Stream (None -> Any) -> Stream Any
   , parallelize : List (None -> Any) -> List Any
+  , splitStream : Stream Any -> Stream (Stream Any)
   , ...
   }
 ```
@@ -93,11 +94,15 @@ is equivalent to:
 
 ```
 let
-  [worlds, otherWorlds] = Effect.split worlds
+  worldStreams = Effect.splitStream worlds
+  worlds = first worldStreams
+  otherWorlds = second worldStreams
 in let
   content = Effect.readFile "foo.txt" otherWorlds
 in let
-  [worlds, otherWorlds] = Effect.split worlds
+  worldStreams = Effect.splitStream worlds
+  worlds = first worldStreams
+  otherWorlds = second worldStreams
 in
   Effect.writeFile "bar.txt" content otherWorlds
 ```
