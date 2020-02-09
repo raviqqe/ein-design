@@ -76,7 +76,7 @@ type Command =
 ```
 type Nondeterministics =
   { sortByTime : Stream (None -> Any) -> Stream Any
-  , parallellize : List (None -> Any) -> List Any
+  , parallelize : List (None -> Any) -> List Any
   , ...
   }
 ```
