@@ -52,7 +52,7 @@ writeFile filename content commands =
 
 ```
 type Parameters =
-  { arguments : List String
+  { arguments : Array String
   , environmentVariables : Map String String
   , ...
   }
