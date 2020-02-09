@@ -15,7 +15,7 @@
 - Environment
   - Command-line arguments
   - Environment variables
-- Nondeterministics
+- Parallelism / Concurrency
   - Parallel evaluation
   - Concurrent queues
 
@@ -24,8 +24,8 @@
 ```
 import "github.com/ein-lang/ein/Effect"
 
-main : Stream World -> None | Error
-main worlds = ...
+main : Environment -> Stream Command -> Stream Concurrency -> None | Error
+main environment commands concurrencies = ...
 ```
 
 ## Effect module
