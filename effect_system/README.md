@@ -12,7 +12,7 @@
   - File system
   - Network
   - Clock
-- Environment
+- Parameters
   - Command-line arguments
   - Environment variables
 - Parallelism / Concurrency
@@ -24,8 +24,8 @@
 ```
 import "github.com/ein-lang/ein/Effect"
 
-main : Environment -> Stream Command -> Stream Concurrency -> None | Error
-main environment commands concurrencies = ...
+main : Parameters -> Stream Command -> Stream Concurrency -> None | Error
+main parameters commands concurrencies = ...
 ```
 
 ## Effect module
