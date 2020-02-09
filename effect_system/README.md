@@ -64,7 +64,7 @@ type Parameters =
 
 ```
 type Command =
-  { openFile : String -> File | Error
+  { openFile : String -> FileMode -> File | Error
   , readFile : File -> String | Error
   , writeFile : File -> String -> None | Error
   , ...
