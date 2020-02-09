@@ -73,8 +73,8 @@ type Command =
 
 ```
 type Concurrency =
-  { sortByTime : Stream (None -> Any) -> Stream Any
-  , parallelize : Stream (None -> Any) -> Stream Any
+  { mapUnorderedStream : Stream (None -> Any) -> Stream Any
+  , mapStream : Stream (None -> Any) -> Stream Any
   , splitStream : Stream Any -> Stream (Stream Any)
   , ...
   }
