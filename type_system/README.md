@@ -166,7 +166,17 @@ type Option =
   | None
 ```
 
-## Case expression
+## Expressions
+
+### Conditionals
+
+#### If expressions
+
+```
+if True then 42 else 13
+```
+
+#### Case expressions
 
 ```
 case foo of
@@ -175,7 +185,7 @@ case foo of
   { name } -> e3
 ```
 
-### Type switch
+##### Type switch
 
 ```
 case bar of
@@ -184,7 +194,7 @@ case bar of
   Baz -> e3
 ```
 
-## Iteration
+### Iteration
 
 > WIP
 
