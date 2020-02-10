@@ -2,10 +2,14 @@
 
 - Nominal typing
 - Restricted polymorphism
-- No top type
-- [Generics](generics.md)
 
 ## Built-in types
+
+### Functions
+
+```
+a -> b
+```
 
 ### Primitives
 
@@ -16,35 +20,43 @@ Number
 String
 ```
 
-### Arrays
+### Collections
+
+#### Arrays
 
 ```
-[a]
+Array a
 ```
 
-#### Update
+##### Update
 
 ```
 [...a, 42]
 [42, ...a]
 ```
 
-### Maps
+#### Maps
 
 ```
-{a}
+Map a b
 ```
 
-#### Update
+##### Update
 
 ```
 { ...a, "foo" = "bar" }
 ```
 
-### Functions
+#### Streams
 
 ```
-a -> b
+Stream a
+```
+
+### Top types
+
+```
+Any
 ```
 
 ## User-defined types
@@ -88,9 +100,6 @@ Person { name = "foo", age = 42 }
 ### Union types
 
 - Type aliases
-- No statically typed enumeration
-  - Like Go
-  - Can it be done by `type Foo = {}`?
 
 ```
 type Foo =
@@ -123,12 +132,21 @@ type Result =
 
 #### Error types
 
-- All types suffixed with `Error`
-  - e.g. `ParseError`
+```
+type Error =
+  { context : Any
+  }
+```
 
 #### ! unary operator
 
-- Return all error types in union types immediately.
+##### Semantics
+
+```
+! function : (a -> b -> ... -> c) -> (a | Error -> b | Error -> ... -> c | Error)
+```
+
+##### Examples
 
 ```
 bar : String -> String | Error
@@ -137,7 +155,7 @@ error : String -> Error
 
 foo : String -> String | Error
 foo x =
-  baz (! bar x) (! error "fail always")
+  ! baz (bar x) (error "fail always")
 ```
 
 ### Option types
@@ -165,6 +183,10 @@ case bar of
   Bar -> e2
   Baz -> e3
 ```
+
+## Iteration
+
+> WIP
 
 ## History
 
