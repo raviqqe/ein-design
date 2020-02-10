@@ -178,7 +178,11 @@ case bar of
 
 ### Iteration
 
-> WIP
+#### Array comprehension
+
+```
+[x * x for x in xs if isEven x]
+```
 
 ## History
 
