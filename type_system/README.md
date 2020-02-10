@@ -187,6 +187,8 @@ case foo of
 
 ##### Type switch
 
+- Used with union or top types
+
 ```
 case bar of
   Foo -> e1
