@@ -146,26 +146,6 @@ type Error =
 ! function : (a -> b -> ... -> c) -> (a | Error -> b | Error -> ... -> c | Error)
 ```
 
-##### Examples
-
-```
-bar : String -> String | Error
-baz : String -> String -> String
-error : String -> Error
-
-foo : String -> String | Error
-foo x =
-  ! baz (bar x) (error "fail always")
-```
-
-### Option types
-
-```
-type Option =
-    Foo
-  | None
-```
-
 ## Expressions
 
 ### Conditionals
