@@ -178,10 +178,26 @@ case bar of
 
 ### Iteration
 
+> WIP
+
+- The worst case
+  - Generic iterative functions
+
 #### Array comprehension
 
 ```
 [x * x for x in xs if isEven x]
+```
+
+#### For loops
+
+```
+for x in xs
+do
+  if x == 42
+    []
+  else
+    [x, ...recur]
 ```
 
 ## History
