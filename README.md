@@ -20,14 +20,15 @@ Make software development easier and faster!
   - Deterministic
   - Strict evaluation
   - Dependency injection
-- Restricted
+- Guided
   - Statically typed
   - Immutability
 
 ## Product strategy
 
 1. Programming language to write command line tools
-1. Programming language to write HTTP API servers
+1. Parallelism and concurrency support
+1. Programming language to write HTTP servers
 1. Binary support
 1. General-purpose programming language for beginners
 1. Self hosting
@@ -40,4 +41,4 @@ Make software development easier and faster!
 - Complexity can only be built upon simplicity.
   - Application logics are complex!
 - Resemble but do not depend on existing technologies.
-- There should be only one way to do one thing.
+- One way to do one thing
