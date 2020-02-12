@@ -71,6 +71,9 @@ type Command =
 
 ### Concurrency types
 
+- Some concurrency bugs are not testable.
+  - e.g. when effects are interleaved in multiple concurrent execution contexts
+
 ```
 type Concurrency =
   { mapUnorderedStream : (Any -> Any) -> Stream Any -> Stream Any
