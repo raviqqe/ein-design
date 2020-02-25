@@ -20,7 +20,13 @@
 
 - [Lecture slides of recursive types at Cornell University](https://www.cs.cornell.edu/courses/cs4110/2012fa/lectures/lecture27.pdf)
 
-## Immix GC
+## Garbage collection
+
+### Reference counting
+
+- [Counting Immutable Beans: Reference Counting Optimized for Purely Functional Programming](https://arxiv.org/abs/1908.05647)
+
+### Immix GC
 
 - [mu/immix-rust](https://gitlab.anu.edu.au/mu/immix-rust)
 - [Immix: A Mark-Region Garbage Collector with Space Efficiency, Fast Collection, and Mutator Performance](https://www.cs.utexas.edu/users/speedway/DaCapo/papers/immix-pldi-2008.pdf)
