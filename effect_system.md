@@ -1,7 +1,7 @@
 # Effect system
 
 - Impure functions are injected only as arguments to main functions.
-  - Any modules including standard ones are all pure.
+  - All modules including standard ones are pure.
 - All effects have output.
   - For testability
   - e.g. `sleep : Number -> None | Error`
@@ -34,14 +34,14 @@ readFile filename commands =
   let
     file = .openFile (first commands) filename ReadOnly
   in
-    .readFile (second commands) (! file)
+    ! .readFile (second commands) file
 
 writeFile : String -> String -> Stream Command -> None | Error
 writeFile filename content commands =
   let
     file = .openFile (first commands) filename WriteOnly
   in
-    .writeFile (second commands) file content
+    ! .writeFile (second commands) file content
 
 ...
 ```
@@ -88,7 +88,7 @@ type Concurrency =
 ```
 do commands
   content = Effect.readFile "foo.txt"
-  Effect.writeFile "bar.txt" content
+  ! Effect.writeFile "bar.txt" content
 ```
 
 is equivalent to:
@@ -105,5 +105,5 @@ in let
   commands = first commandStreams
   otherCommands = second commandStreams
 in
-  Effect.writeFile "bar.txt" content otherCommands
+  ! Effect.writeFile "bar.txt" content otherCommands
 ```
