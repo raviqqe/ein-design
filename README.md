@@ -17,7 +17,8 @@ Make software development easier and faster!
 - Simple
   - Easy to learn
 - Testable
-  - Deterministic
+  - Purely functional
+    - Deterministic
   - Strict evaluation
   - Dependency injection
 - Guided
