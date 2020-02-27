@@ -27,11 +27,11 @@ Make software development easier and faster!
 
 ## Product strategy
 
-1. Programming language to write command line tools
+1. Language for command line tools
 1. Parallelism and concurrency support
-1. Programming language to write HTTP servers
+1. Language for HTTP servers
 1. Binary support
-1. General-purpose programming language for beginners
+1. General-purpose language
 1. Self hosting
 
 ## Product principles
