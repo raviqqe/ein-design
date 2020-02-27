@@ -71,12 +71,11 @@ type Command =
 
 ### Concurrency types
 
-- Some concurrency bugs are not testable.
-  - e.g. when effects are interleaved in multiple concurrent execution contexts
+- Concurrency errors among effects are not testable.
 
 ```
 type Concurrency =
-  { evaluateUnorderedStream :  Stream (None -> Any) -> Stream Any
+  { evaluateUnorderedStream : Stream (None -> Any) -> Stream Any
   , evaluateStream : Stream (None -> Any) -> Stream Any
   , splitStream : Stream Any -> Stream (Stream Any)
   , ...
