@@ -1,4 +1,4 @@
-# v11
+# Type system
 
 - Nominal typing
 - Restricted polymorphism
@@ -18,6 +18,17 @@ Boolean
 None
 Number
 String
+```
+
+#### Literals
+
+```
+False
+True
+None
+42
+-42
+"String"
 ```
 
 ### Collections
@@ -52,6 +63,10 @@ Map a b
 ```
 Stream a
 ```
+
+##### Update
+
+> WIP
 
 ### Top types
 
@@ -178,37 +193,8 @@ case bar of
 
 ### Iteration
 
-> WIP
-
-- The worst case
-  - Generic iterative functions
-
 #### Array comprehension
 
 ```
 [x * x for x in xs if isEven x]
 ```
-
-#### For loops
-
-```
-for x in xs
-do
-  if x == 42
-    []
-  else
-    [x, ...recur]
-```
-
-## History
-
-- [v1](v1.md)
-- [v2](v2.md)
-- [v3](v3.md)
-- [v4](v4.md)
-- [v5](v5.md)
-- [v6](v6.md)
-- [v7](v7.md)
-- [v8](v8.md)
-- [v9](v9.md)
-- [v10](v10.md)
