@@ -26,6 +26,42 @@ main : Parameters -> Stream Command -> Stream Concurrency -> None | Error
 main parameters commands concurrencies = ...
 ```
 
+### Argument types
+
+#### Parameters types
+
+```
+type Parameters =
+  { arguments : Array String
+  , environmentVariables : Map String String
+  , ...
+  }
+```
+
+#### Command types
+
+```
+type Command =
+  { openFile : String -> FileMode -> File | Error
+  , readFile : File -> String | Error
+  , writeFile : File -> String -> None | Error
+  , ...
+  }
+```
+
+#### Concurrency types
+
+- Concurrency errors among effects are not testable.
+
+```
+type Concurrency =
+  { evaluateUnorderedStream : Stream (None -> Any) -> Stream Any
+  , evaluateStream : Stream (None -> Any) -> Stream Any
+  , splitStream : Stream Any -> Stream (Stream Any)
+  , ...
+  }
+```
+
 ## Effect module
 
 ```
@@ -44,42 +80,6 @@ writeFile filename content commands =
     ! .writeFile (second commands) file content
 
 ...
-```
-
-## Argument types
-
-### Parameters types
-
-```
-type Parameters =
-  { arguments : Array String
-  , environmentVariables : Map String String
-  , ...
-  }
-```
-
-### Command types
-
-```
-type Command =
-  { openFile : String -> FileMode -> File | Error
-  , readFile : File -> String | Error
-  , writeFile : File -> String -> None | Error
-  , ...
-  }
-```
-
-### Concurrency types
-
-- Concurrency errors among effects are not testable.
-
-```
-type Concurrency =
-  { evaluateUnorderedStream : Stream (None -> Any) -> Stream Any
-  , evaluateStream : Stream (None -> Any) -> Stream Any
-  , splitStream : Stream Any -> Stream (Stream Any)
-  , ...
-  }
 ```
 
 ## Do notation
