@@ -5,12 +5,12 @@
 In `github.com/ein-lang/foo/Foo.ein`,
 
 ```
-export { Foo, bar }
+export { Foo, foo }
 
 type Foo = { foo : Number }
 
-bar : Number -> Number
-bar x = x
+foo : Number -> Number
+foo x = x
 ```
 
 ## Importing modules
@@ -20,6 +20,6 @@ import "github.com/ein-lang/foo/Foo"
 
 type Bar = { foo : Foo.Foo }
 
-baz : Number -> Number
-baz x = Foo.foo x
+bar : Number -> Number
+bar x = Foo.foo x
 ```
