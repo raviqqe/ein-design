@@ -23,12 +23,12 @@ String
 #### Literals
 
 ```
-False
-True
-None
+false
+true
+none
 42
 -42
-"String"
+"string"
 ```
 
 ### Collections
@@ -168,7 +168,7 @@ type Error =
 #### If expressions
 
 ```
-if True then 42 else 13
+if true then 42 else 13
 ```
 
 #### Case expressions
