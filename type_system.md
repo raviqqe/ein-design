@@ -99,7 +99,7 @@ export { Person { ... } }
 #### Initialization
 
 ```
-Person { name = "foo", age = 42 }
+{ name = "foo", age = 42 }
 ```
 
 #### Operations
