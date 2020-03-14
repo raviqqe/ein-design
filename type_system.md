@@ -39,9 +39,10 @@ none
 Array a
 ```
 
-##### Update
+##### Operations
 
 ```
+array @ 0
 [...a, 42]
 [42, ...a]
 ```
@@ -52,10 +53,11 @@ Array a
 Map a b
 ```
 
-##### Update
+##### Operations
 
 ```
-{ ...a, "foo" = "bar" }
+map @ "foo"
+{ ...a, ["foo"] = "bar" }
 ```
 
 #### Streams
@@ -64,7 +66,7 @@ Map a b
 Stream a
 ```
 
-##### Update
+##### Operations
 
 > WIP
 
@@ -100,15 +102,10 @@ export { Person { ... } }
 Person { name = "foo", age = 42 }
 ```
 
-#### Property access
+#### Operations
 
 ```
 .name person
-```
-
-#### Update
-
-```
 { ...person, name = "bar" }
 ```
 
@@ -193,8 +190,9 @@ case bar of
 
 ### Iteration
 
-#### Array comprehension
+#### Comprehension
 
 ```
-[x * x for x in xs if isEven x]
+[x * x for x in array if isEven x]
+{k: v for k, v in map if isEven x}
 ```
