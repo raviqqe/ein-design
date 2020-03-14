@@ -43,8 +43,8 @@ Array a
 
 ```
 array @ 0
-[...a, 42]
-[42, ...a]
+[...array, 42]
+[42, ...array]
 ```
 
 #### Maps
@@ -57,7 +57,7 @@ Map a b
 
 ```
 map @ "foo"
-{ ...a, ["foo"] = "bar" }
+{ ...map, "foo": "bar" }
 ```
 
 #### Streams
