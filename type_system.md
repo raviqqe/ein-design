@@ -85,28 +85,28 @@ Any
 
 ```
 type Person =
-  { name : String
+  ( name : String
   , age : Number
-  }
+  )
 ```
 
 #### Exporting properties
 
 ```
-export { Person { ... } }
+export { Person ( ... ) }
 ```
 
 #### Initialization
 
 ```
-Person { name = "foo", age = 42 }
+Person ( name = "foo", age = 42 )
 ```
 
 #### Operations
 
 ```
 .name person
-{ ...person, name = "bar" }
+( ...person, name = "bar" )
 ```
 
 ### Union types
@@ -172,9 +172,9 @@ if true then 42 else 13
 
 ```
 case foo of
-  { name = "John" } -> e1
-  { name = "Doe" } -> e2
-  { name } -> e3
+  ( name = "John" ) -> e1
+  ( name = "Doe" ) -> e2
+  ( name ) -> e3
 ```
 
 ##### Type switch
