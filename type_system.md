@@ -57,7 +57,7 @@ Map a b
 
 ```
 map @ "foo"
-{ ...map, "foo": "bar" }
+{ ...map, "foo" = "bar" }
 ```
 
 #### Streams
