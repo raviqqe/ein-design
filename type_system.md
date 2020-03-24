@@ -128,7 +128,7 @@ type Foo =
   | Baz
 
 type Blah =
-    Foo
+    ...Foo
   | Qux
 ```
 
