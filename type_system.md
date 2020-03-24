@@ -104,8 +104,10 @@ Person ( name = "foo", age = 42 )
 
 #### Operations
 
+- No element access operation
+  - Use case expressions for decomposition.
+
 ```
-.name person
 ( ...person, name = "bar" )
 ```
 
@@ -180,6 +182,8 @@ case foo of
 ##### Type switch
 
 - Used with union or top types
+- Separated from value case expressions
+  - As union types can include built-in types
 
 ```
 case bar of
