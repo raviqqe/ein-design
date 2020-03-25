@@ -148,8 +148,8 @@ type Result =
 
 ```
 type Error =
-  { context : Any
-  }
+  ( context : Any
+  )
 ```
 
 #### ! unary operator
@@ -173,14 +173,14 @@ if true then 42 else 13
 #### Case expressions
 
 ```
-case foo of
+case x of
   Person ( name = "John" ) -> ...
   Person ( name = "Doe" ) -> ...
   Person ( name ) -> ...
   42 -> ...
   true -> ...
   none -> ...
-  x -> ...
+  y -> ...
 ```
 
 ### Iteration
