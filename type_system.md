@@ -43,8 +43,8 @@ Array a
 
 ```
 array @ 0
-[...array, 42]
-[42, ...array]
+[ ...array, 42 ]
+[ 42, ...array ]
 ```
 
 #### Maps
@@ -188,6 +188,6 @@ case x of
 #### Comprehension
 
 ```
-[x for x in array if isEven x]
-{k: v for k, v in map if isEven x}
+[ x for x in array if isEven x ]
+{ k: v for k, v in map if isEven x }
 ```
