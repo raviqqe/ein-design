@@ -189,5 +189,5 @@ case x of
 
 ```
 [ x for x in array if isEven x ]
-{ k: v for k, v in map if isEven x }
+{ k : v for k, v in map if isEven x }
 ```
