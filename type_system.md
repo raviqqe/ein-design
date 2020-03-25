@@ -84,7 +84,7 @@ Any
   - Properties are hidden by default.
 
 ```
-type Person =
+type Person
   ( name : String
   , age : Number
   )
@@ -147,7 +147,7 @@ type Result =
 #### Error types
 
 ```
-type Error =
+type Error
   ( context : Any
   )
 ```
