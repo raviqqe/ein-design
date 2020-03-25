@@ -108,7 +108,7 @@ Person ( name = "foo", age = 42 )
   - Use case expressions for decomposition.
 
 ```
-( ...person, name = "bar" )
+Person ( ...person, name = "bar" )
 ```
 
 ### Union types
@@ -174,22 +174,13 @@ if true then 42 else 13
 
 ```
 case foo of
-  ( name = "John" ) -> e1
-  ( name = "Doe" ) -> e2
-  ( name ) -> e3
-```
-
-##### Type switch
-
-- Used with union or top types
-- Separated from value case expressions
-  - As union types can include built-in types
-
-```
-case bar of
-  Foo -> e1
-  Bar -> e2
-  Baz -> e3
+  Person ( name = "John" ) -> ...
+  Person ( name = "Doe" ) -> ...
+  Person ( name ) -> ...
+  42 -> ...
+  true -> ...
+  none -> ...
+  x -> ...
 ```
 
 ### Iteration
