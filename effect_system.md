@@ -31,22 +31,22 @@ main parameters commands concurrencies = ...
 #### Parameters types
 
 ```
-type Parameters =
-  { arguments : Array String
+type Parameters
+  ( arguments : Array String
   , environmentVariables : Map String String
   , ...
-  }
+  )
 ```
 
 #### Command types
 
 ```
-type Command =
-  { openFile : String -> FileMode -> File | Error
+type Command
+  ( openFile : String -> FileMode -> File | Error
   , readFile : File -> String | Error
   , writeFile : File -> String -> None | Error
   , ...
-  }
+  )
 ```
 
 #### Concurrency types
@@ -54,12 +54,12 @@ type Command =
 - Concurrency errors among effects are not testable.
 
 ```
-type Concurrency =
-  { evaluateUnorderedStream : Stream (None -> Any) -> Stream Any
+type Concurrency
+  ( evaluateUnorderedStream : Stream (None -> Any) -> Stream Any
   , evaluateStream : Stream (None -> Any) -> Stream Any
   , splitStream : Stream Any -> Stream (Stream Any)
   , ...
-  }
+  )
 ```
 
 ## Effect module
