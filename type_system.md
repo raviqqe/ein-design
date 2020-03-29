@@ -108,7 +108,7 @@ Person ( name = "foo", age = 42 )
   - Use case expressions for decomposition.
 
 ```
-Person ( ...person, name = "bar" )
+( ...person, name = "bar" )
 ```
 
 ### Union types
