@@ -155,7 +155,7 @@ type Error
 ##### Semantics
 
 ```
-! function : (a -> b -> ... -> c) -> a | Error -> b | Error -> ... -> c | Error
+! : (a -> b -> ... -> c) -> a | Error -> b | Error -> ... -> c | Error
 ```
 
 ## Expressions
