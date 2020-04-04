@@ -105,7 +105,7 @@ Person ( name = "foo", age = 42 )
 #### Operations
 
 ```
-.name person
+Person.name person
 ( ...person, name = "bar" )
 ```
 
