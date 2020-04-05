@@ -106,7 +106,7 @@ Person ( name = "foo", age = 42 )
 
 ```
 Person.name person
-( ...person, name = "bar" )
+Person ( ...person, name = "bar" )
 ```
 
 ### Union types
