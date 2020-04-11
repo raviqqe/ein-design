@@ -11,6 +11,8 @@
 - [TypeScript](https://github.com/microsoft/TypeScript)
 - [Haskell](https://github.com/ghc/ghc)
 - [OCaml](https://github.com/ocaml/ocaml)
+- [Nim](https://github.com/nim-lang/Nim)
+  - Its garbage collection with deferred reference counting is interesting.
 
 ## Language design
 
@@ -19,6 +21,7 @@
 ## Type system
 
 - [Lecture slides of recursive types at Cornell University](https://www.cs.cornell.edu/courses/cs4110/2012fa/lectures/lecture27.pdf)
+- [Algebraic subtyping](https://www.cl.cam.ac.uk/~sd601/thesis.pdf)
 
 ## Garbage collection
 
