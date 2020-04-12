@@ -22,6 +22,7 @@
 
 - [Lecture slides of recursive types at Cornell University](https://www.cs.cornell.edu/courses/cs4110/2012fa/lectures/lecture27.pdf)
 - [Algebraic subtyping](https://www.cl.cam.ac.uk/~sd601/thesis.pdf)
+  - [Polymorphism, Subtyping, and Type Inference in MLsub](https://www.cl.cam.ac.uk/~sd601/papers/mlsub-preprint.pdf)
 
 ## Garbage collection
 
