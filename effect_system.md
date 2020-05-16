@@ -68,16 +68,16 @@ type Concurrency
 readFile : String -> Stream Command -> String | Error
 readFile filename commands =
   let
-    file = .openFile (first commands) filename ReadOnly
+    file = Command.openFile (first commands) filename ReadOnly
   in
-    ! .readFile (second commands) file
+    ! Command.readFile (second commands) file
 
 writeFile : String -> String -> Stream Command -> None | Error
 writeFile filename content commands =
   let
-    file = .openFile (first commands) filename WriteOnly
+    file = Command.openFile (first commands) filename WriteOnly
   in
-    ! .writeFile (second commands) file content
+    ! Command.writeFile (second commands) file content
 
 ...
 ```
