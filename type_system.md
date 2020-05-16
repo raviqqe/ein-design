@@ -81,7 +81,7 @@ Any
 ### Record types
 
 - Encapsulated
-  - Properties are hidden by default.
+  - Properties are hidden.
 
 ```
 type Person
@@ -90,22 +90,11 @@ type Person
   )
 ```
 
-#### Exporting properties
-
-```
-export { Person ( ... ) }
-```
-
-#### Initialization
-
-```
-Person ( name = "foo", age = 42 )
-```
-
 #### Operations
 
 ```
 Person.name person
+Person ( name = "foo", age = 42 )
 Person ( ...person, name = "bar" )
 ```
 
