@@ -108,18 +108,6 @@ type Foo =
   | Blah
 ```
 
-#### Extension
-
-```
-type Foo =
-    Bar
-  | Baz
-
-type Blah =
-    ...Foo
-  | Qux
-```
-
 ## Special types
 
 ### Result types
