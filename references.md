@@ -5,6 +5,7 @@
 - [Elm](https://github.com/elm)
 - [Go](https://github.com/golang/go)
   - The package namespace system like Go works only with object-oriented programming as classes create subnamespaces.
+  - [Channels - A Tour of Go](https://tour.golang.org/concurrency/2)
 - [Gluon](https://github.com/gluon-lang/gluon)
 - [Expresso](https://github.com/willtim/Expresso)
 - [IntercalScript](https://github.com/Storyyeller/IntercalScript)
