@@ -97,16 +97,8 @@ is equivalent to:
 ```
 let
   commandStreams = Effect.splitStream commands
-  commands = commandStreams @ 0
-  otherCommands = commandStreams @ 1
-in let
-  content = Effect.readFile "foo.txt" otherCommands
-in let
-  commandStreams = Effect.splitStream commands
-  commands = commandStreams @ 0
-  otherCommands = commandStreams @ 1
-in let
-  result = ! Effect.writeFile "bar.txt" content otherCommands
+  content = Effect.readFile "foo.txt" (commandStreams @ 0)
+  result = ! Effect.writeFile "bar.txt" content (commandStreams @ 1)
 in
   result
 ```
