@@ -68,16 +68,16 @@ type Concurrency
 readFile : String -> Stream Command -> String | Error
 readFile filename commands =
   let
-    file = Command.openFile (first commands) filename ReadOnly
+    file = Command.openFile (commands @ 0) filename ReadOnly
   in
-    ! Command.readFile (second commands) file
+    ! Command.readFile (commands @ 1) file
 
 writeFile : String -> String -> Stream Command -> None | Error
 writeFile filename content commands =
   let
-    file = Command.openFile (first commands) filename WriteOnly
+    file = Command.openFile (commands @ 0) filename WriteOnly
   in
-    ! Command.writeFile (second commands) file content
+    ! Command.writeFile (commands @ 1) file content
 
 ...
 ```
@@ -87,7 +87,9 @@ writeFile filename content commands =
 ```
 do commands
   content = Effect.readFile "foo.txt"
-  ! Effect.writeFile "bar.txt" content
+  result = ! Effect.writeFile "bar.txt" content
+in
+  result
 ```
 
 is equivalent to:
@@ -95,14 +97,16 @@ is equivalent to:
 ```
 let
   commandStreams = Effect.splitStream commands
-  commands = first commandStreams
-  otherCommands = second commandStreams
+  commands = commandStreams @ 0
+  otherCommands = commandStreams @ 1
 in let
   content = Effect.readFile "foo.txt" otherCommands
 in let
   commandStreams = Effect.splitStream commands
-  commands = first commandStreams
-  otherCommands = second commandStreams
+  commands = commandStreams @ 0
+  otherCommands = commandStreams @ 1
+in let
+  result = ! Effect.writeFile "bar.txt" content otherCommands
 in
-  ! Effect.writeFile "bar.txt" content otherCommands
+  result
 ```
