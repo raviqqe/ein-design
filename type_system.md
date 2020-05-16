@@ -68,7 +68,10 @@ Stream a
 
 ##### Operations
 
-> WIP
+```
+stream @ 0
+stream << x
+```
 
 ### Top types
 
