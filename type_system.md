@@ -80,8 +80,7 @@ Any
 
 ### Record types
 
-- Encapsulated
-  - Properties are hidden.
+- Properties are hidden outside the modules where they are defined.
 
 ```
 type Person
