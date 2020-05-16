@@ -22,11 +22,21 @@
 ## Main functions
 
 ```
-main : Parameters -> Stream Command -> Stream Concurrency -> None | Error
-main parameters commands concurrencies = ...
+main : Effects -> None | Error
+main effects = ...
 ```
 
 ### Argument types
+
+#### Effects types
+
+```
+type Effects
+  ( parameters : Parameters
+  , commands : Stream Command
+  , concurrencies : Stream Concurrency
+  )
+```
 
 #### Parameters types
 
@@ -55,8 +65,8 @@ type Command
 
 ```
 type Concurrency
-  ( evaluateUnorderedStream : Stream (None -> Any) -> Stream Any
-  , evaluateStream : Stream (None -> Any) -> Stream Any
+  ( evaluateStream : Stream (None -> Any) -> Stream Any
+  , evaluateUnorderedStream : Stream (None -> Any) -> Stream Any
   , splitStream : Stream Any -> Stream (Stream Any)
   , ...
   )
@@ -85,7 +95,7 @@ writeFile filename content commands =
 ## Do notation
 
 ```
-do commands
+do effects
   content = Effect.readFile "foo.txt"
   result = ! Effect.writeFile "bar.txt" content
 in
@@ -96,9 +106,9 @@ is equivalent to:
 
 ```
 let
-  commandStreams = Effect.splitStream commands
-  content = Effect.readFile "foo.txt" (commandStreams @ 0)
-  result = ! Effect.writeFile "bar.txt" content (commandStreams @ 1)
+  effectStreams = Effect.splitEffects effects
+  content = Effect.readFile "foo.txt" (effectStreams @ 0)
+  result = ! Effect.writeFile "bar.txt" content (effectStreams @ 1)
 in
   result
 ```
