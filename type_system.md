@@ -43,7 +43,7 @@ Array a
 
 ```
 array @ 0
-array @ (range 0 42)
+array @ Range.new 0 42
 [ ...array, 42 ]
 [ 42, ...array ]
 ```
@@ -71,7 +71,7 @@ Stream a
 
 ```
 stream @ 0
-stream @ (range 0 42)
+stream @ Range.new 0 42
 stream << x
 ```
 
