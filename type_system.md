@@ -23,9 +23,9 @@ String
 #### Literals
 
 ```
-false
-true
-none
+False
+True
+None
 42
 -42
 "string"
@@ -92,6 +92,12 @@ type Person
   ( name : String
   , age : Number
   )
+```
+
+#### No-element records
+
+```
+type Foo
 ```
 
 #### Operations
