@@ -152,7 +152,7 @@ type Error
 #### If expressions
 
 ```
-if true then 42 else 13
+if True then 42 else 13
 ```
 
 #### Case expressions
