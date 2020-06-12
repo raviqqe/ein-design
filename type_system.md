@@ -94,7 +94,7 @@ type Person
   )
 ```
 
-#### No-element records
+#### Elementless records
 
 ```
 type Foo
@@ -110,13 +110,14 @@ Person ( ...person, name = "bar" )
 
 ### Union types
 
-- Type aliases
+```
+Foo | Bar | Baz
+```
+
+### Type alias
 
 ```
-type Foo =
-    Bar
-  | Baz
-  | Blah
+type Foo = Bar
 ```
 
 ## Special types
