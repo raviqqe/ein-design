@@ -94,7 +94,7 @@ type Person
   )
 ```
 
-#### Elementless records
+#### Element-less records
 
 ```
 type Foo
