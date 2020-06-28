@@ -31,48 +31,22 @@ None
 "string"
 ```
 
-### Collections
-
-#### Arrays
-
-```
-Array a
-```
-
-##### Operations
-
-```
-array @ 0
-array @ Range.new 0 42
-[ ...array, 42 ]
-[ 42, ...array ]
-```
-
-#### Maps
-
-```
-Map a b
-```
-
-##### Operations
-
-```
-map @ "foo"
-{ ...map, "foo" = "bar" }
-```
-
-#### Streams
+### Streams
 
 ```
 Stream a
 ```
 
-##### Operations
+#### Operations
+
+- Evaluation of elements are always delayed.
 
 ```
-stream @ 0
-stream @ Range.new 0 42
-stream << x
+stream @ 1
+stream @ Range.new 1 42
+[ ...stream, 42 ]
+[ 42, ...stream ]
+[ x for x in stream if test x ]
 ```
 
 ### Top types
@@ -163,13 +137,4 @@ case x = expression
   Person => ...
   Number => ...
   Boolean | None => ...
-```
-
-### Iteration
-
-#### Comprehension
-
-```
-[ x for x in array if isEven x ]
-{ k = v for k, v in map if isEven x }
 ```
