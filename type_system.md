@@ -96,7 +96,7 @@ type Foo = Bar
 
 ## Special types
 
-#### Error types
+### Error types
 
 ```
 type Error
@@ -104,9 +104,7 @@ type Error
   )
 ```
 
-##### ! unary operator
-
-###### Semantics
+#### ! unary operator
 
 ```
 ! : (a -> b -> ... -> c) -> a | Error -> b | Error -> ... -> c | Error
