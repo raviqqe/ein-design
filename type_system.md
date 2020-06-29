@@ -122,15 +122,13 @@ type Error
 
 ## Expressions
 
-### Conditionals
-
-#### If expressions
+### If expressions
 
 ```
 if True then 42 else 13
 ```
 
-#### Case expressions
+### Case expressions
 
 ```
 case x = expression
