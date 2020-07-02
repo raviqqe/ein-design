@@ -3,13 +3,7 @@
 - Nominal typing
 - Restricted polymorphism
 
-## Built-in types
-
-### Functions
-
-```
-a -> b
-```
+## Types
 
 ### Primitives
 
@@ -28,70 +22,44 @@ True
 None
 42
 -42
-"string"
+"String"
 ```
 
-### Collections
-
-#### Arrays
+### Functions
 
 ```
-Array a
+a -> b
 ```
 
-##### Operations
+### Streams
 
-```
-array @ 0
-array @ Range.new 0 42
-[ ...array, 42 ]
-[ 42, ...array ]
-```
-
-#### Maps
-
-```
-Map a b
-```
-
-##### Operations
-
-```
-map @ "foo"
-{ ...map, "foo" = "bar" }
-```
-
-#### Streams
+- Lazy lists
 
 ```
 Stream a
 ```
 
-##### Operations
+#### Operations
+
+- Elements are evaluated lazily.
 
 ```
-stream @ 0
-stream @ Range.new 0 42
-stream << x
+stream @ 1
+stream @ Range.new 1 42
+[ ...stream, 42 ]
+[ 42, ...stream ]
+[ x for x in stream if test x ]
 ```
 
-### Top types
+### Records
+
+- Elements are hidden outside the modules where they are defined.
 
 ```
-Any
-```
-
-## User-defined types
-
-### Record types
-
-- Properties are hidden outside the modules where they are defined.
-
-```
-type Person
-  ( name : String
-  , age : Number
-  )
+type Person (
+  name : String,
+  age : Number,
+)
 ```
 
 #### Element-less records
@@ -108,39 +76,29 @@ Person ( name = "foo", age = 42 )
 Person ( ...person, name = "bar" )
 ```
 
-### Union types
+### Unions
 
 ```
 Foo | Bar | Baz
 ```
 
-### Type alias
+### Any
 
 ```
-type Foo = Bar
+Any
 ```
 
 ## Special types
 
-### Result types
+### Error types
 
 ```
-type Result =
-    Foo
-  | Error
-```
-
-#### Error types
-
-```
-type Error
-  ( context : Any
-  )
+type Error (
+  context : Any,
+)
 ```
 
 #### ! unary operator
-
-##### Semantics
 
 ```
 ! : (a -> b -> ... -> c) -> a | Error -> b | Error -> ... -> c | Error
@@ -148,15 +106,13 @@ type Error
 
 ## Expressions
 
-### Conditionals
-
-#### If expressions
+### If expressions
 
 ```
 if True then 42 else 13
 ```
 
-#### Case expressions
+### Case expressions
 
 ```
 case x = expression
@@ -165,11 +121,10 @@ case x = expression
   Boolean | None => ...
 ```
 
-### Iteration
+## Others
 
-#### Comprehension
+### Type alias
 
 ```
-[ x for x in array if isEven x ]
-{ k = v for k, v in map if isEven x }
+type Foo = Bar
 ```
