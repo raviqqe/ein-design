@@ -53,7 +53,7 @@ stream @ Range.new 1 42
 
 ### Records
 
-- Properties are hidden outside the modules where they are defined.
+- Elements are hidden outside the modules where they are defined.
 
 ```
 type Person (
