@@ -33,6 +33,8 @@ a -> b
 
 ### Streams
 
+- Lazy lists
+
 ```
 Stream a
 ```
