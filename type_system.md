@@ -22,7 +22,7 @@ True
 None
 42
 -42
-"string"
+"String"
 ```
 
 ### Functions
