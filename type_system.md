@@ -93,9 +93,9 @@ Any
 ### Error types
 
 ```
-type Error
-  ( context : Any
-  )
+type Error (
+  context : Any,
+)
 ```
 
 #### ! unary operator
