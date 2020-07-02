@@ -41,7 +41,7 @@ Stream a
 
 #### Operations
 
-- Evaluation of elements are always delayed.
+- Elements are always evaluated lazily.
 
 ```
 stream @ 1
