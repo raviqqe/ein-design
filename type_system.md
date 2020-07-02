@@ -3,13 +3,7 @@
 - Nominal typing
 - Restricted polymorphism
 
-## Built-in types
-
-### Functions
-
-```
-a -> b
-```
+## Types
 
 ### Primitives
 
@@ -31,6 +25,12 @@ None
 "string"
 ```
 
+### Functions
+
+```
+a -> b
+```
+
 ### Streams
 
 ```
@@ -49,23 +49,15 @@ stream @ Range.new 1 42
 [ x for x in stream if test x ]
 ```
 
-### Top types
-
-```
-Any
-```
-
-## User-defined types
-
-### Record types
+### Records
 
 - Properties are hidden outside the modules where they are defined.
 
 ```
-type Person
-  ( name : String
-  , age : Number
-  )
+type Person (
+  name : String,
+  age : Number,
+)
 ```
 
 #### Element-less records
@@ -82,16 +74,16 @@ Person ( name = "foo", age = 42 )
 Person ( ...person, name = "bar" )
 ```
 
-### Union types
+### Unions
 
 ```
 Foo | Bar | Baz
 ```
 
-### Type alias
+### Any
 
 ```
-type Foo = Bar
+Any
 ```
 
 ## Special types
@@ -125,4 +117,12 @@ case x = expression
   Person => ...
   Number => ...
   Boolean | None => ...
+```
+
+## Others
+
+### Type alias
+
+```
+type Foo = Bar
 ```
