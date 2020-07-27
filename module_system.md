@@ -24,7 +24,7 @@ bar : Number -> Number
 bar x = Foo.foo x
 ```
 
-## Aliasing
+### Aliasing
 
 ```
 import F "github.com/ein-lang/foo/Foo"
