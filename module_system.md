@@ -23,3 +23,14 @@ type Bar = { foo : Foo.Foo }
 bar : Number -> Number
 bar x = Foo.foo x
 ```
+
+## Aliasing
+
+```
+import F "github.com/ein-lang/foo/Foo"
+
+type Bar = { foo : F.Foo }
+
+bar : Number -> Number
+bar x = F.foo x
+```
