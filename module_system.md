@@ -1,8 +1,11 @@
 # Module system
 
-## Exporting variables and types
+## Naming
 
-In `github.com/ein-lang/foo/Foo.ein`,
+- A repository name + a module name
+  - e.g. `github.com/ein-lang/foo/Foo/Bar.ein`
+
+## Exporting variables and types
 
 ```
 export { Foo, foo }
