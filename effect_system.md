@@ -65,8 +65,8 @@ type Command
 
 ```
 type Concurrency
-  ( evaluateStream : Stream (None -> Any) -> Stream Any
-  , evaluateUnorderedStream : Stream (None -> Any) -> Stream Any
+  ( evaluateStream : Stream Any -> Stream Any
+  , evaluateUnorderedStream : Stream Any -> Stream Any
   , splitStream : Stream Any -> Stream (Stream Any)
   , ...
   )
