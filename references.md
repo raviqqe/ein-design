@@ -26,6 +26,10 @@
 - [Algebraic subtyping](https://www.cl.cam.ac.uk/~sd601/thesis.pdf)
   - [Polymorphism, Subtyping, and Type Inference in MLsub](https://www.cl.cam.ac.uk/~sd601/papers/mlsub-preprint.pdf)
 
+## Effect system
+
+- [Effects bibliography](https://github.com/yallop/effects-bibliography)
+
 ## Garbage collection
 
 ### Reference counting
