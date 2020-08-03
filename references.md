@@ -29,6 +29,7 @@
 ## Effect system
 
 - [Effects bibliography](https://github.com/yallop/effects-bibliography)
+- [libhandler](https://github.com/koka-lang/libhandler)
 
 ## Garbage collection
 
