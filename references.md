@@ -15,6 +15,7 @@
 - [OCaml](https://github.com/ocaml/ocaml)
 - [Nim](https://github.com/nim-lang/Nim)
   - Its garbage collection with deferred reference counting is interesting.
+- [Koka](https://github.com/koka-lang/koka)
 
 ## Language design
 
