@@ -56,10 +56,10 @@ stream @ Range.new 1 42
 - Elements are hidden outside the modules where they are defined.
 
 ```
-type Person (
+type Person {
   name : String,
   age : Number,
-)
+}
 ```
 
 #### Element-less records
@@ -72,8 +72,8 @@ type Foo
 
 ```
 Person.name person
-Person ( name = "foo", age = 42 )
-Person ( ...person, name = "bar" )
+Person { name = "foo", age = 42 }
+Person { ...person, name = "bar" }
 ```
 
 ### Unions
@@ -93,9 +93,9 @@ Any
 ### Error types
 
 ```
-type Error (
+type Error {
   context : Any,
-)
+}
 ```
 
 #### ! unary operator

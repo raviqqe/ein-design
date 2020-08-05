@@ -31,32 +31,32 @@ main effects = ...
 #### Effects types
 
 ```
-type Effects
-  ( parameters : Parameters
-  , commands : Stream Command
-  , concurrencies : Stream Concurrency
-  )
+type Effects {
+  parameters : Parameters,
+  commands : Stream Command,
+  concurrencies : Stream Concurrency,
+}
 ```
 
 #### Parameters types
 
 ```
-type Parameters
-  ( arguments : Array String
-  , environmentVariables : Map String String
-  , ...
-  )
+type Parameters {
+  arguments : Array String,
+  environmentVariables : Map String String,
+  ...
+}
 ```
 
 #### Command types
 
 ```
-type Command
-  ( openFile : String -> FileMode -> File | Error
-  , readFile : File -> String | Error
-  , writeFile : File -> String -> None | Error
-  , ...
-  )
+type Command {
+  openFile : String -> FileMode -> File | Error,
+  readFile : File -> String | Error,
+  writeFile : File -> String -> None | Error,
+  ...
+}
 ```
 
 #### Concurrency types
@@ -64,12 +64,12 @@ type Command
 - Concurrency errors among effects are not testable.
 
 ```
-type Concurrency
-  ( evaluateStream : Stream Any -> Stream Any
-  , evaluateUnorderedStream : Stream Any -> Stream Any
-  , splitStream : Stream Any -> Stream (Stream Any)
-  , ...
-  )
+type Concurrency {
+  evaluateStream : Stream Any -> Stream Any,
+  evaluateUnorderedStream : Stream Any -> Stream Any,
+  splitStream : Stream Any -> Stream (Stream Any),
+  ...
+}
 ```
 
 ## Effect module

@@ -10,7 +10,7 @@
 ```
 export { Foo, foo }
 
-type Foo ( foo : Number )
+type Foo { foo : Number }
 
 foo : Number -> Number
 foo x = x
@@ -21,7 +21,7 @@ foo x = x
 ```
 import "github.com/ein-lang/foo/Foo"
 
-type Bar ( foo : Foo.Foo )
+type Bar { foo : Foo.Foo }
 
 bar : Number -> Number
 bar x = Foo.foo x
@@ -32,7 +32,7 @@ bar x = Foo.foo x
 ```
 import F "github.com/ein-lang/foo/Foo"
 
-type Bar ( foo : F.Foo )
+type Bar { foo : F.Foo }
 
 bar : Number -> Number
 bar x = F.foo x
