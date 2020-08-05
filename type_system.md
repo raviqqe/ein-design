@@ -31,12 +31,12 @@ None
 a -> b
 ```
 
-### Streams
+### Lists
 
-- Lazy lists
+- Maybe lazy
 
 ```
-Stream a
+List a
 ```
 
 #### Operations
@@ -44,11 +44,11 @@ Stream a
 - Elements are evaluated lazily.
 
 ```
-stream @ 1
-stream @ Range.new 1 42
-[ ...stream, 42 ]
-[ 42, ...stream ]
-[ x for x in stream if test x ]
+list @ 1
+list @ Range.new 1 42
+[ ...list, 42 ]
+[ 42, ...list ]
+[ x for x in list if test x ]
 ```
 
 ### Records
