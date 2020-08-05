@@ -3,6 +3,8 @@
     "concurrencies",
     "expresso",
     "intercal",
+    "koka",
+    "libhandler",
     "llvm",
     "mlsub",
     "reactiveness",
