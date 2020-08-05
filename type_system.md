@@ -41,8 +41,6 @@ List a
 
 #### Operations
 
-- Elements are evaluated lazily.
-
 ```
 list @ 1
 list @ Range.new 1 42
