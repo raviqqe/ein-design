@@ -111,13 +111,13 @@ to
 ##### Lists
 
 ```
-[ ... ] : List (a | Error)
+list : List (a | Error)
 ```
 
 to
 
 ```
-! [ ... ] : List a | Error
+! list : List a | Error
 ```
 
 ## Expressions
