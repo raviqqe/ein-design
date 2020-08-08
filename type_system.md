@@ -86,9 +86,7 @@ Foo | Bar | Baz
 Any
 ```
 
-## Special types
-
-### Error types
+### Error
 
 ```
 type Error {
@@ -98,8 +96,28 @@ type Error {
 
 #### ! unary operator
 
+##### Functions
+
 ```
-! : (a -> b -> ... -> c) -> a | Error -> b | Error -> ... -> c | Error
+foo : a -> b -> ... -> c
+```
+
+to
+
+```
+! foo : a | Error -> b | Error -> ... -> c | Error
+```
+
+##### Lists
+
+```
+[ ... ] : List (a | Error)
+```
+
+to
+
+```
+! [ ... ] : List a | Error
 ```
 
 ## Expressions
