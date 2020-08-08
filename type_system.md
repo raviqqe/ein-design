@@ -86,7 +86,7 @@ Foo | Bar | Baz
 Any
 ```
 
-### Error
+### Errors
 
 ```
 type Error {
