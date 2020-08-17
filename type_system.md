@@ -144,3 +144,9 @@ case x = expression
 ```
 type Foo = Bar
 ```
+
+### Type coercion
+
+```
+x as Number
+```
