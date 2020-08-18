@@ -46,7 +46,22 @@ list @ 1
 list @ Range.new 1 42
 [ ...list, 42 ]
 [ 42, ...list ]
-[ x for x in list if test x ]
+[ x for x in xs if test x ]
+```
+
+##### Loop syntax
+
+```
+for sum, x in xs
+  x + sum
+
+for result, x in xs
+  case result
+    Error => result
+    List Number =>
+      case x
+        Error => x
+        Number => [...result, x]
 ```
 
 ### Records
@@ -96,8 +111,6 @@ type Error {
 
 #### ! unary operator
 
-##### Functions
-
 ```
 foo : a -> b -> ... -> c
 ```
@@ -106,18 +119,6 @@ to
 
 ```
 ! foo : a | Error -> b | Error -> ... -> c | Error
-```
-
-##### Lists
-
-```
-list : List (a | Error)
-```
-
-to
-
-```
-! list : List a | Error
 ```
 
 ## Expressions
