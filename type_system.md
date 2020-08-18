@@ -33,6 +33,7 @@ a -> b
 
 ### Lists
 
+- Generic
 - Maybe lazy
 
 ```
@@ -46,7 +47,6 @@ list @ 1
 list @ Range.new 1 42
 [ ...list, 42 ]
 [ 42, ...list ]
-[ x for x in list if test x ]
 ```
 
 ### Records
@@ -96,28 +96,14 @@ type Error {
 
 #### ! unary operator
 
-##### Functions
-
 ```
-foo : a -> b -> ... -> c
+foo : (a -> b -> ... -> c) | Error
 ```
 
 to
 
 ```
 ! foo : a | Error -> b | Error -> ... -> c | Error
-```
-
-##### Lists
-
-```
-list : List (a | Error)
-```
-
-to
-
-```
-! list : List a | Error
 ```
 
 ## Expressions
@@ -145,8 +131,10 @@ case x = expression
 type Foo = Bar
 ```
 
-### Type coercion
+## Built-in functions
 
 ```
-x as Number
+map : a -> b -> List a -> List b
+filter : a -> Boolean -> List a -> List a
+transpose : List (a | Error) -> List a | Error
 ```
