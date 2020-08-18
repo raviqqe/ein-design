@@ -125,10 +125,10 @@ case x = expression
 ### For expressions
 
 ```
-for sum, x in xs
+for sum = 0, x in xs
   x + sum
 
-for result, x in xs
+for result = [], x in xs
   case result
     Error => result
     List Number =>
