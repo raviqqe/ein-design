@@ -69,8 +69,8 @@ type Foo
 
 ```
 Person.name person
-Person { name = "foo", age = 42 }
-Person { ...person, name = "bar" }
+Person{ name = "foo", age = 42 }
+Person{ ...person, name = "bar" }
 ```
 
 ### Unions
