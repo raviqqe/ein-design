@@ -122,13 +122,15 @@ case x = expression
   Boolean | None => ...
 ```
 
-### For expressions
+### Loop expressions
 
 ```
-for sum = 0, x in xs
+loop sum = 0
+for x in xs
   x + sum
 
-for result = [], x in xs
+loop result = []
+for x in xs
   case result
     Error => result
     List Number =>
