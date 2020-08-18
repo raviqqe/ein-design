@@ -46,7 +46,6 @@ list @ 1
 list @ Range.new 1 42
 [ ...list, 42 ]
 [ 42, ...list ]
-[ x for x in xs if test x ]
 ```
 
 ##### Loop syntax
