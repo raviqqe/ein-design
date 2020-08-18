@@ -33,7 +33,7 @@ a -> b
 
 ### Lists
 
-- Maybe lazy
+- Generic
 
 ```
 List a
@@ -89,7 +89,7 @@ Any
 
 ```
 type Error {
-  context : Any,
+  error : Any,
 }
 ```
 
