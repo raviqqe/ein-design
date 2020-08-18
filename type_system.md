@@ -48,21 +48,6 @@ list @ Range.new 1 42
 [ 42, ...list ]
 ```
 
-##### Loop syntax
-
-```
-for sum, x in xs
-  x + sum
-
-for result, x in xs
-  case result
-    Error => result
-    List Number =>
-      case x
-        Error => x
-        Number => [...result, x]
-```
-
 ### Records
 
 - Elements are hidden outside the modules where they are defined.
@@ -135,6 +120,21 @@ case x = expression
   Person => ...
   Number => ...
   Boolean | None => ...
+```
+
+### For expressions
+
+```
+for sum, x in xs
+  x + sum
+
+for result, x in xs
+  case result
+    Error => result
+    List Number =>
+      case x
+        Error => x
+        Number => [...result, x]
 ```
 
 ## Others
