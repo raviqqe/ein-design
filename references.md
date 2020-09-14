@@ -49,3 +49,7 @@
 
 - [RRB-Trees: Efficient Immutable Vectors](https://infoscience.epfl.ch/record/169879/files/RMTrees.pdf)
 - [Optimizing Hash-Array Mapped Tries for Fast and Lean Immutable JVM Collections](https://michael.steindorfer.name/publications/oopsla15.pdf)
+
+## Coroutines
+
+- [From folklore to fact: comparing implementations of stacks and continuations](https://dl.acm.org/doi/10.1145/3385412.3385994)
