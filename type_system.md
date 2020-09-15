@@ -127,19 +127,19 @@ case x = expression
 
 ```
 for sum xs
-  if isEmpty xs
-  then sum
-  else recur (sum + xs @ 1) (xs @ from 2)
+  case xs
+    [] => sum
+    [ x, ...xs ] => recur (sum + x) xs
 ```
 
 ```
 for xs ys
-  if isEmpty xs
-  then ys
-  else
-    case y = f (xs @ 1)
-      Error => y
-      Number => recur (xs @ from 2) [ y, ...ys ]
+  case xs
+    [] => ys
+    [ x, ...xs ] =>
+      case y = f x
+        Error => y
+        Number => recur xs [ y, ...ys ]
 ```
 
 ## Others
