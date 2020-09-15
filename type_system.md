@@ -133,13 +133,13 @@ for sum xs
 ```
 
 ```
-for xs results
+for xs ys
   if isEmpty xs
-  then results
+  then ys
   else
     case y = doSomething (xs @ 1)
       Error => y
-      Number => recur (xs @ from 2) [ y, ...results ]
+      Number => recur (xs @ from 2) [ y, ...ys ]
 ```
 
 ## Others
