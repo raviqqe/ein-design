@@ -137,7 +137,7 @@ for xs ys
   if isEmpty xs
   then ys
   else
-    case y = doSomething (xs @ 1)
+    case y = f (xs @ 1)
       Error => y
       Number => recur (xs @ from 2) [ y, ...ys ]
 ```
