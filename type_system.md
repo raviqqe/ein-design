@@ -43,8 +43,6 @@ List a
 #### Operations
 
 ```
-list @ 1
-list @ Range.new 1 42
 [ ...list, 42 ]
 [ 42, ...list ]
 ```
