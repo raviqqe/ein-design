@@ -126,18 +126,20 @@ case x = expression
 ### Loop expressions
 
 ```
-loop sum = 0
-for x in xs
-  x + sum
+for sum xs
+  if isEmpty xs
+  then sum
+  else recur (sum + xs @ 1) (xs @ from 2)
+```
 
-loop result = []
-for x in xs
-  case result
-    Error => result
-    List Number =>
-      case x
-        Error => x
-        Number => [...result, x]
+```
+for xs results
+  if isEmpty xs
+  then results
+  else
+    case y = doSomething (xs @ 1)
+      Error => y
+      Number => recur (xs @ from 2) [ y, ...results ]
 ```
 
 ## Others
