@@ -116,6 +116,16 @@ if True then 42 else 13
 
 ### Case expressions
 
+#### Lists
+
+```
+case xs
+  [] => ...
+  [ x, ...xs ] => ...
+```
+
+#### Types
+
 ```
 case x = expression
   Person => ...
