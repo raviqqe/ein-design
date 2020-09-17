@@ -131,25 +131,6 @@ case x = expression
   Boolean | None => ...
 ```
 
-### Loop expressions
-
-```
-for sum xs
-  case xs
-    [] => sum
-    [ x, ...xs ] => recur (sum + x) xs
-```
-
-```
-for xs ys
-  case xs
-    [] => ys
-    [ x, ...xs ] =>
-      case y = f x
-        Error => y
-        Number => recur xs [ y, ...ys ]
-```
-
 ## Others
 
 ### Type alias
