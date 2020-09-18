@@ -42,7 +42,6 @@ List a
 #### Operations
 
 ```
-[ ...list, 42 ]
 [ 42, ...list ]
 ```
 
