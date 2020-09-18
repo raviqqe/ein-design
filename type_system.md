@@ -47,7 +47,7 @@ List a
 
 ### Records
 
-- Elements are hidden outside the modules where they are defined.
+- Elements are private outside modules.
 
 ```
 type Person {
