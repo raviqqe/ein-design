@@ -18,8 +18,8 @@ Make software development easier and faster!
 - Simple
   - Easy to learn
 - Testable
-  - Purely functional
-    - Deterministic
+  - Functional
+  - Deterministic
   - Strict evaluation
   - Dependency injection
 - Guided
