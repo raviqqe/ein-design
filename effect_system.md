@@ -22,7 +22,7 @@ main : Os -> None | Error
 main os = ...
 ```
 
-### Argument type
+### OS type
 
 ```
 type Os {
@@ -34,9 +34,17 @@ type Os {
   writeFile : File -> String -> None | Error,
   ... ,
 
-  evaluateStream : Stream Any -> Stream Any,
-  evaluateUnorderedStream : Stream Any -> Stream Any,
-  splitStream : Stream Any -> Stream (Stream Any),
+  concurrency : Concurrency,
+}
+```
+
+### Concurrency type
+
+```
+type Concurrency {
+  parallel: Stream Any -> Stream Any,
+  race : Stream Any -> Stream Any,
+  split : Stream Any -> Stream (Stream Any),
   ... ,
 }
 ```
