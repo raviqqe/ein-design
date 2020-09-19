@@ -21,7 +21,5 @@
 
 ## Packages
 
-The last components should be in kebab case (?).
-
 - `github.com/ein-lang/foo`
 - `github.com/foo/bar`
