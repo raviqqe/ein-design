@@ -1,10 +1,5 @@
 # Module system
 
-## Naming
-
-- A repository name + a module name
-  - e.g. `github.com/ein-lang/foo/Foo/Bar` for a file named `Bar.ein` in a `Foo` directory in a repository of `github.com/ein-lang/foo`
-
 ## Exporting variables and types
 
 ```
@@ -26,6 +21,11 @@ type Bar { foo : Foo.Foo }
 bar : Number -> Number
 bar x = Foo.foo x
 ```
+
+### Referencing
+
+- A repository name + a module name
+  - e.g. `github.com/ein-lang/foo/Foo/Bar` for a file named `Bar.ein` in a `Foo` directory in a repository of `github.com/ein-lang/foo`
 
 ### Aliasing
 
