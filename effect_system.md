@@ -1,10 +1,6 @@
 # Effect system
 
 - Impure functions are injected only as arguments to main functions.
-  - All modules including standard ones are pure.
-- All effects have output.
-  - For testability
-  - e.g. `sleep : Number -> None | Error`
 
 ## Effects
 
@@ -22,93 +18,33 @@
 ## Main functions
 
 ```
-main : Effects -> None | Error
-main effects = ...
+main : Os -> None | Error
+main os = ...
 ```
 
-### Argument types
-
-#### Effects types
+### OS type
 
 ```
-type Effects {
-  parameters : Parameters,
-  commands : Stream Command,
-  concurrencies : Stream Concurrency,
-}
-```
+type Os {
+  arguments : List String,
+  environmentVariables : List String,
 
-#### Parameters types
-
-```
-type Parameters {
-  arguments : Array String,
-  environmentVariables : Map String String,
-  ...
-}
-```
-
-#### Command types
-
-```
-type Command {
   openFile : String -> FileMode -> File | Error,
   readFile : File -> String | Error,
   writeFile : File -> String -> None | Error,
-  ...
+  ... ,
+
+  concurrency : Concurrency,
 }
 ```
 
-#### Concurrency types
-
-- Concurrency errors among effects are not testable.
+### Concurrency type
 
 ```
 type Concurrency {
-  evaluateStream : Stream Any -> Stream Any,
-  evaluateUnorderedStream : Stream Any -> Stream Any,
-  splitStream : Stream Any -> Stream (Stream Any),
-  ...
+  parallel: Stream Any -> Stream Any,
+  race : Stream Any -> Stream Any,
+  split : Stream Any -> Stream (Stream Any),
+  ... ,
 }
-```
-
-## Effect module
-
-```
-readFile : String -> Stream Command -> String | Error
-readFile filename commands =
-  let
-    file = Command.openFile (commands @ 0) filename ReadOnly
-  in
-    ! Command.readFile (commands @ 1) file
-
-writeFile : String -> String -> Stream Command -> None | Error
-writeFile filename content commands =
-  let
-    file = Command.openFile (commands @ 0) filename WriteOnly
-  in
-    ! Command.writeFile (commands @ 1) file content
-
-...
-```
-
-## Do notation
-
-```
-do effects
-  content = Effect.readFile "foo.txt"
-  result = ! Effect.writeFile "bar.txt" content
-in
-  result
-```
-
-is equivalent to:
-
-```
-let
-  effectStreams = Effect.splitEffects effects
-  content = Effect.readFile "foo.txt" (effectStreams @ 0)
-  result = ! Effect.writeFile "bar.txt" content (effectStreams @ 1)
-in
-  result
 ```
