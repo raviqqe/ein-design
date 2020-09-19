@@ -33,7 +33,7 @@ Make software development easier and faster!
 1. Language for HTTP servers
 1. Binary support
 1. General-purpose language
-1. Self hosting
+1. Self-hosting
 
 ## Product principles
 
