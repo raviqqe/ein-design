@@ -56,18 +56,18 @@ type Person {
 }
 ```
 
-#### Element-less records
-
-```
-type Foo
-```
-
 #### Operations
 
 ```
 Person.name person
 Person{ name = "foo", age = 42 }
 Person{ ...person, name = "bar" }
+```
+
+### Enumerated types
+
+```
+type Foo
 ```
 
 ### Unions
