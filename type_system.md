@@ -90,18 +90,6 @@ type Error {
 }
 ```
 
-#### ! unary operator
-
-```
-foo : a -> b -> ... -> c
-```
-
-to
-
-```
-! foo : a | Error -> b | Error -> ... -> c | Error
-```
-
 ## Expressions
 
 ### If expressions
