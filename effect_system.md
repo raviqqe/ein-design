@@ -1,6 +1,6 @@
 # Effect system
 
-- Impure functions are injected only as arguments to main functions.
+- Impure functions are injected only as arguments to functions.
 
 ## Effects
 

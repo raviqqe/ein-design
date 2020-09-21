@@ -20,7 +20,9 @@
 
 ```json
 {
-  "target": { "type": "Library" },
+  "target": {
+    "type": "Library"
+  },
   "dependencies": {
     "github.com/bar/baz": { "version": "master" }
   }
