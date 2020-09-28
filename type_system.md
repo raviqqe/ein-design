@@ -82,14 +82,6 @@ Foo | Bar | Baz
 Any
 ```
 
-### Errors
-
-```
-type Error {
-  error : Any,
-}
-```
-
 ## Expressions
 
 ### If expressions
