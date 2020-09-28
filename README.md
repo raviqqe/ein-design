@@ -1,6 +1,7 @@
 # The design of Ein programming language
 
 - [Type system](type_system.md)
+- [Error handling](error_handling.md)
 - [Effect system](effect_system.md)
 - [Module system](module_system.md)
 - [Package system](package_system.md)
