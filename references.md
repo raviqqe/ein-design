@@ -26,6 +26,7 @@
 - [Lecture slides of recursive types at Cornell University](https://www.cs.cornell.edu/courses/cs4110/2012fa/lectures/lecture27.pdf)
 - [Algebraic subtyping](https://www.cl.cam.ac.uk/~sd601/thesis.pdf)
   - [Polymorphism, Subtyping, and Type Inference in MLsub](http://stedolan.net/research/mlsub.pdf)
+- [Practical type inference for arbitrary-rank types](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/putting.pdf)
 
 ## Effect system
 
