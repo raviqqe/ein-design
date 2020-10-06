@@ -15,8 +15,7 @@ String
 #### Literals
 
 ```
-42
--42
+-12.3
 "String"
 ```
 
@@ -32,10 +31,10 @@ a -> b
 [a]
 ```
 
-#### Operations
+#### Literals
 
 ```
-[ 42, ...list ]
+[ 1, 2, 3 ]
 ```
 
 ### Records
