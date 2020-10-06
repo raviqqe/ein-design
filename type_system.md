@@ -1,15 +1,13 @@
 # Type system
 
 - Nominal typing
-- Restricted polymorphism
+- Rank-N types
 
 ## Types
 
 ### Primitives
 
 ```
-Boolean
-None
 Number
 String
 ```
@@ -17,9 +15,6 @@ String
 #### Literals
 
 ```
-False
-True
-None
 42
 -42
 "String"
@@ -32,8 +27,6 @@ a -> b
 ```
 
 ### Lists
-
-- Generic
 
 ```
 List a
@@ -64,22 +57,10 @@ Person{ name = "foo", age = 42 }
 Person{ ...person, name = "bar" }
 ```
 
-### Enumerated types
-
-```
-type Foo
-```
-
 ### Unions
 
 ```
-Foo | Bar | Baz
-```
-
-### Any
-
-```
-Any
+type Maybe a = Just a | None
 ```
 
 ## Expressions
@@ -102,6 +83,8 @@ case xs
 
 #### Types
 
+- Arguments need to be union types.
+
 ```
 case x = expression
   Person => ...
@@ -114,5 +97,5 @@ case x = expression
 ### Type alias
 
 ```
-type Foo = Bar
+type alias Foo = Bar
 ```
