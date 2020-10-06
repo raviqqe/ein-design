@@ -29,7 +29,7 @@ a -> b
 ### Lists
 
 ```
-List a
+[a]
 ```
 
 #### Operations
