@@ -1,11 +1,11 @@
 # Error handling
 
-## Error type
+## Result type
 
 ```
-type Error {
-  error : Any,
-}
+type Result x e =
+    Ok x
+  | Error e
 ```
 
 ## Error binding
@@ -22,6 +22,6 @@ is equivalent to:
 
 ```
 case y = x
+  Ok => Ok y + 42
   Error => y
-  Number => y + 42
 ```
