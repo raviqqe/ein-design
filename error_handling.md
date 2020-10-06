@@ -3,7 +3,7 @@
 ## Result type
 
 ```
-type Result x e =
+type Result e x =
     Ok x
   | Error e
 ```
