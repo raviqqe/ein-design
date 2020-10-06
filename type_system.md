@@ -74,10 +74,10 @@ if True then 42 else 13
 
 ### Case expressions
 
-- Arguments need to be union types.
+- Arguments are union types.
 
 ```
-case expression
+case x
   Person person => ...
   Number number => ...
   _ => ...
