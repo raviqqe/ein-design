@@ -22,6 +22,6 @@ is equivalent to:
 
 ```
 case y = x
-  Ok => Ok y + 42
+  Ok => Ok (y + 42)
   Error => y
 ```
