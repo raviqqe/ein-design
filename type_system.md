@@ -60,7 +60,9 @@ Person{ ...person, name = "bar" }
 ### Unions
 
 ```
-type Maybe a = Just a | None
+type Maybe a =
+    Just a
+  | None
 ```
 
 ## Expressions
