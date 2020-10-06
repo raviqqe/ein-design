@@ -91,11 +91,3 @@ case xs
   [] => ...
   [ x, ...xs ] => ...
 ```
-
-## Others
-
-### Type alias
-
-```
-type alias Foo = Bar
-```
