@@ -75,23 +75,21 @@ if True then 42 else 13
 
 ### Case expressions
 
+- Arguments need to be union types.
+
+```
+case expression
+  Person person => ...
+  Number number => ...
+  _ => ...
+```
+
 #### Lists
 
 ```
 case xs
   [] => ...
   [ x, ...xs ] => ...
-```
-
-#### Types
-
-- Arguments need to be union types.
-
-```
-case x = expression
-  Person => ...
-  Number => ...
-  Boolean | None => ...
 ```
 
 ## Others

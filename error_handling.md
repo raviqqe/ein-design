@@ -21,7 +21,7 @@ in
 is equivalent to:
 
 ```
-case y = x
-  Ok => Ok (y + 42)
-  Error => y
+case x
+  Ok y => Ok (y + 42)
+  Error e => Error e
 ```
