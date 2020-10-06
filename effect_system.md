@@ -42,9 +42,9 @@ type Os {
 
 ```
 type Concurrency {
-  parallel : Stream Any -> Stream Any,
-  race : Stream Any -> Stream Any,
-  split : Stream Any -> Stream (Stream Any),
+  parallel : Stream a -> Stream a,
+  race : Stream a -> Stream a,
+  split : Stream a -> Stream (Stream a),
   ... ,
 }
 ```
