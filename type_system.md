@@ -1,7 +1,7 @@
 # Type system
 
 - Nominal typing
-- Rank-N types
+- Generics
 
 ## Types
 
