@@ -33,18 +33,5 @@ type Os {
   readFile : File -> String | Error,
   writeFile : File -> String -> None | Error,
   ... ,
-
-  concurrency : Concurrency,
-}
-```
-
-### Concurrency type
-
-```
-type Concurrency {
-  parallel : Stream a -> Stream a,
-  race : Stream a -> Stream a,
-  split : Stream a -> Stream (Stream a),
-  ... ,
 }
 ```
