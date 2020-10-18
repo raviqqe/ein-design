@@ -36,7 +36,7 @@ a -> b
 - Generic
 
 ```
-List a
+[a]
 ```
 
 #### Operations

@@ -26,8 +26,8 @@ main os = ...
 
 ```
 type Os {
-  arguments : List String,
-  environmentVariables : List String,
+  arguments : [String],
+  environmentVariables : [String],
 
   openFile : String -> FileMode -> File | Error,
   readFile : File -> String | Error,
