@@ -34,6 +34,7 @@ a -> b
 ### Lists
 
 - Generic
+- Lazy
 
 ```
 [a]
