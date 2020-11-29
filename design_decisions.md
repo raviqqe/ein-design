@@ -10,7 +10,7 @@
 
 ### Cons
 
-- Implementation of more stuff
+- Implementation of more algorithms and data structures
   - e.g. KMP substring search
 
 ## Inductive definitions of low-level values
