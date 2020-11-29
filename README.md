@@ -6,6 +6,7 @@
 - [Module system](module_system.md)
 - [Package system](package_system.md)
 - [Naming convention](naming_convention.md)
+- [Design decisions](design_decisions.md)
 - [References](references.md)
 
 ## Mission statement
