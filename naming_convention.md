@@ -21,5 +21,5 @@
 
 ## Packages
 
-- `github.com/ein-lang/foo`
 - `github.com/foo/bar`
+- `github.com/foo-bar/baz-blah`
