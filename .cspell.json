@@ -1,6 +1,8 @@
 {
   "words": [
     "concurrencies",
+    "cranelift",
+    "emscripten",
     "expresso",
     "intercal",
     "koka",
@@ -11,6 +13,8 @@
     "stateful",
     "subtyped",
     "subtyping",
-    "tagless"
+    "tagless",
+    "wasm",
+    "wasmtime"
   ]
 }

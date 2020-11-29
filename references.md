@@ -58,3 +58,9 @@
 ## Lazy evaluation
 
 - [The Spineless Tagless G-machine](https://www.microsoft.com/en-us/research/wp-content/uploads/1992/04/spineless-tagless-gmachine.pdf)
+
+## WASM
+
+- [emscripten](https://emscripten.org/index.html)
+- [wasmtime](https://github.com/bytecodealliance/wasmtime)
+- [cranelift](https://github.com/bytecodealliance/wasmtime/tree/main/cranelift)
