@@ -1,8 +1,8 @@
 # Design decisions
 
-## No standard library written in foregin languages
+## No standard library written in foreign languages
 
-- If standard libraries are written in another language, both languages need to support all the backends.
+- If standard libraries are written in another language, both languages need to support all the backend.
 
 ### Pros
 
