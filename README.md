@@ -30,18 +30,19 @@ Make software development easier and faster!
 ## Product strategy
 
 1. Language for command line tools
+1. Asynchronous operations
 1. Parallelism and concurrency support
 1. Language for HTTP servers
 1. Binary support
+1. WASM backend
 1. General-purpose language
 1. Self-hosting
 
 ## Product principles
 
 - Perfection is achieved when there is nothing to take away or add.
-- 1% demand does not matter.
-  - e.g. Go
 - Complexity can only be built upon simplicity.
   - Application logics are complex!
-- Resemble but do not depend on existing technologies.
 - One way to do one thing
+- Imitate but do not depend on existing technologies.
+- Satisfy 100% of users but no more than 100%.
