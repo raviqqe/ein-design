@@ -2,6 +2,8 @@
 
 ## No standard library written in foregin languages
 
+- If standard libraries are written in another language, both languages need to support all the backends.
+
 ### Pros
 
 - Portability of the language and its standard library
