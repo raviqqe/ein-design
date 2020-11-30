@@ -64,3 +64,4 @@
 - [emscripten](https://emscripten.org/index.html)
 - [wasmtime](https://github.com/bytecodealliance/wasmtime)
 - [cranelift](https://github.com/bytecodealliance/wasmtime/tree/main/cranelift)
+- [mimalloc](https://github.com/microsoft/mimalloc)
