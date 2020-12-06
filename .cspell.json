@@ -15,6 +15,7 @@
     "subtyped",
     "subtyping",
     "tagless",
+    "wasi",
     "wasm",
     "wasmtime"
   ]
