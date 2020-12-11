@@ -46,4 +46,3 @@ Make software development easier and faster!
   - Application logics are complex!
 - One way to do one thing
 - Imitate but do not depend on existing technologies.
-- Satisfy 100% of users but no more than 100%.
