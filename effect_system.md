@@ -18,20 +18,17 @@
 ## Main functions
 
 ```
-main : Os -> None | Error
-main os = ...
+main : System -> None | Error
+main system = ...
 ```
 
-### OS type
+### System type
+
+- Based on [WASI](https://wasi.dev/)
 
 ```
-type Os {
-  arguments : [String],
-  environmentVariables : [String],
-
-  openFile : String -> FileMode -> File | Error,
-  readFile : File -> String | Error,
-  writeFile : File -> String -> None | Error,
+type System {
+  fdWrite : Number -> [String] -> Number | Error,
   ... ,
 
   concurrency : Concurrency,
