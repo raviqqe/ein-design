@@ -18,7 +18,7 @@
 ## Main functions
 
 ```
-main : System -> None | Error
+main : System -> Number
 main system = ...
 ```
 
