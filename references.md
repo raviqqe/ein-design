@@ -66,3 +66,8 @@
 - [cranelift](https://github.com/bytecodealliance/wasmtime/tree/main/cranelift)
 - [wasi crate for Rust](https://github.com/bytecodealliance/wasi)
 - [mimalloc](https://github.com/microsoft/mimalloc)
+
+## Module system
+
+- [Deno](https://deno.land/)
+  - [Linking to third party code](https://deno.land/manual/linking_to_external_code)
