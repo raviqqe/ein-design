@@ -39,6 +39,7 @@
 ### Reference counting
 
 - [Counting Immutable Beans: Reference Counting Optimized for Purely Functional Programming](https://arxiv.org/abs/1908.05647)
+  - [Slides](https://leanprover.github.io/talks/IFL2019.pdf)
 
 ### Immix GC
 
