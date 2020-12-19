@@ -16,6 +16,7 @@
 - [Nim](https://github.com/nim-lang/Nim)
   - Its garbage collection with deferred reference counting is interesting.
 - [Koka](https://github.com/koka-lang/koka)
+- [Lean 4](https://github.com/leanprover/lean4)
 
 ## Language design
 
