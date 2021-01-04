@@ -65,7 +65,8 @@
 
 - [emscripten](https://emscripten.org/index.html)
 - [wasmtime](https://github.com/bytecodealliance/wasmtime)
-- [cranelift](https://github.com/bytecodealliance/wasmtime/tree/main/cranelift)
+- [Cranelift](https://github.com/bytecodealliance/wasmtime/tree/main/cranelift)
+  - [Cranelift IR](https://github.com/bytecodealliance/wasmtime/blob/main/cranelift/docs/ir.md)
 - [wasi crate for Rust](https://github.com/bytecodealliance/wasi)
 - [mimalloc](https://github.com/microsoft/mimalloc)
 
