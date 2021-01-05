@@ -17,6 +17,7 @@
   - Its garbage collection with deferred reference counting is interesting.
 - [Koka](https://github.com/koka-lang/koka)
 - [Lean 4](https://github.com/leanprover/lean4)
+- [Lobster](https://github.com/aardappel/lobster)
 
 ## Language design
 
