@@ -22,6 +22,7 @@
 ## Language design
 
 - [Less is more: language features](https://blog.ploeh.dk/2015/04/13/less-is-more-language-features/)
+- [プログラミング言語の未来はどうなるか](https://keens.github.io/blog/2021/01/04/future_of_proguramming_languages/)
 
 ## Type system
 
