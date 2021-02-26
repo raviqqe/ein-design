@@ -11,6 +11,7 @@
     "llvm",
     "mimalloc",
     "mlsub",
+    "perceus",
     "reactiveness",
     "stateful",
     "subtyped",
