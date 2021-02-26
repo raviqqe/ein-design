@@ -42,6 +42,7 @@
 
 - [Counting Immutable Beans: Reference Counting Optimized for Purely Functional Programming](https://arxiv.org/abs/1908.05647)
   - [Slides](https://leanprover.github.io/talks/IFL2019.pdf)
+- [Perceus: Garbage Free Reference Counting with Reuse](https://www.microsoft.com/en-us/research/publication/perceus-garbage-free-reference-counting-with-reuse/)
 
 ### Immix GC
 
