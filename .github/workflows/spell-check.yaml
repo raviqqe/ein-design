@@ -4,9 +4,8 @@ on:
 jobs:
   spell-check:
     runs-on: ubuntu-latest
-    container:
-      image: node
     steps:
-      - uses: actions/checkout@master
-      - run: npm install -g cspell
-      - run: cspell **/*.md
+      - uses: actions/checkout@v2
+      - uses: streetsidesoftware/cspell-action@master
+        with:
+          files: "**/*.md"
